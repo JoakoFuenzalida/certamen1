@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Certamen 1 FEP · Guía de estudio</title>
-<meta name="description" content="Guía de estudio para el Certamen 1 de Formulación de Proyectos Informáticos.">
+<meta name="description" content="Guía de estudio para el Certamen 1 de Formulación de Proyectos Informáticos, ordenada según el comunicado del profesor.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Public+Sans:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;600&display=swap">
 <style>
@@ -109,7 +109,38 @@ summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .filters button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--paper)}
 .score{position:sticky;bottom:calc(12px + env(safe-area-inset-bottom, 0px));margin-top:16px;display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:10px 14px;font-family:var(--f-mono);font-size:14px}
 .score button{font:inherit;background:transparent;color:var(--accent);border:1px solid var(--accent);border-radius:4px;padding:4px 10px;cursor:pointer}
-@media (max-width:560px){.block{grid-template-columns:1fr;gap:4px}}
+tr.hot td{background:var(--accent-soft)}
+ul.plain{margin:6px 0 12px;padding-left:20px} ul.plain li{margin:3px 0}
+.gwrap{display:grid;grid-template-columns:190px 1fr;gap:16px;align-items:start;margin:8px 0 14px}
+.gwrap svg{width:100%;height:auto}
+ol.steps{margin:0;padding-left:20px} ol.steps li{margin:4px 0}
+h3.exh{font-size:21px;margin-top:26px;padding-top:10px;border-top:2px solid var(--accent);color:var(--accent)}
+svg.net{display:block;width:100%;height:auto;margin:10px 0;font-family:var(--f-mono)}
+.netbox{overflow-x:auto;background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:8px}
+.netbox svg.net{min-width:640px;margin:0}
+svg.net rect{fill:var(--paper);stroke:var(--muted);stroke-width:1.2}
+svg.net g.cr rect{stroke:var(--accent);stroke-width:2.6}
+svg.net g path{fill:none;stroke:var(--line);stroke-width:1}
+svg.net g.cr path{stroke:var(--accent);stroke-opacity:.45}
+svg.net text{fill:var(--ink);font-size:13px;text-anchor:middle}
+svg.net text.nm{font-family:var(--f-display);font-weight:800;font-size:17px}
+svg.net text.h{fill:var(--warn);font-weight:600}
+svg.net path.e{fill:none;stroke:var(--muted);stroke-width:1.4}
+svg.net path.ec{stroke:var(--accent);stroke-width:2.4}
+svg.net path.ed{stroke-dasharray:5 3}
+svg.net .mk{fill:var(--muted)} svg.net .mkc{fill:var(--accent)}
+svg.net text.lb{font-size:11.5px;fill:var(--accent);font-weight:600;paint-order:stroke;stroke:var(--paper);stroke-width:4px}
+.gantt{display:grid;grid-template-columns:26px repeat(22,minmax(0,1fr));row-gap:6px;margin:10px 0 14px;background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:10px 10px 12px 6px;font-family:var(--f-mono);font-size:11px}
+.gantt .gl{grid-column:1;font-weight:700;color:var(--ink);font-size:13px;line-height:16px}
+.gantt .gw{color:var(--muted);border-left:1px solid var(--line);padding-left:2px;line-height:14px}
+.gantt .gtrack{grid-column:2/-1;display:grid;grid-template-columns:repeat(22,minmax(0,1fr));height:16px;background-image:linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:calc(100%/22) 100%}
+.gantt .gb{grid-row:1;height:100%;background:var(--muted);opacity:.55;border-radius:2px}
+.gantt .gb.gc{background:var(--accent);opacity:1}
+.gantt .gs{grid-row:1;align-self:center;height:0;border-top:2px dotted var(--warn)}
+.gkey{font-size:13px;color:var(--muted);margin:-6px 0 12px}
+.qtools{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:4px 0}
+.qtools button{font:inherit;font-size:13px;background:transparent;color:var(--accent);border:1px solid var(--accent);border-radius:4px;padding:3px 10px;cursor:pointer}
+@media (max-width:560px){.block{grid-template-columns:1fr;gap:4px}.gwrap{grid-template-columns:1fr}.gwrap svg{max-width:190px}}
 @media (prefers-reduced-motion:reduce){.meter i{transition:none}}
 </style>
 
@@ -119,9 +150,9 @@ summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
   <div class="wrap">
     <div class="eyebrow">ICI5444 · Formulación de Proyectos · Certamen 1</div>
     <h1>Guía de estudio para el Certamen 1</h1>
-    <p class="lead">Armada con las pautas de los dos controles, las seis unidades, las tres lecturas, los seis trabajos de investigación y los capítulos del PMBOK que entran. Incluye un plan horario de jueves a viernes, resúmenes, fórmulas, ejercicios resueltos y un simulacro. El avance del plan y del simulacro se guarda sólo en tu navegador.</p>
+    <p class="lead">Ordenada según el comunicado del profe: 32 preguntas, 360 puntos, y casi la mitad en Estimación y Planificación. Arriba la distribución y un plan para el viernes; abajo la materia por puntos, 22 ejercicios resueltos y un simulacro en modo certamen. El avance del plan y del simulacro se guarda sólo en tu navegador.</p>
     <div class="facts">
-      <span class="chip">Control 2 · <b>el más parecido</b> al certamen</span>
+      <span class="chip">Comunicado · <b>32 preguntas · 360 pts</b></span>
       <span class="chip">Certamen · viernes <b>15:50</b></span>
       <span class="chip">Sin apuntes · <b>con calculadora</b></span>
     </div>
@@ -130,206 +161,378 @@ summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 
 <nav class="bar" aria-label="Secciones">
   <div class="wrap">
-    <a href="#diag">Qué preguntaron</a>
+    <a href="#comunicado">Comunicado</a>
     <a href="#plan">Plan</a>
+    <a href="#est">Estimación</a>
+    <a href="#plan2">Planificación</a>
+    <a href="#scr">Sala · Calidad · Riesgos</a>
     <a href="#arq">Arquitectura</a>
-    <a href="#ti">Trabajos de investigación</a>
-    <a href="#formulas">Fórmulas</a>
-    <a href="#pares">Pares</a>
+    <a href="#ti">Investigación</a>
     <a href="#ejercicios">Ejercicios</a>
     <a href="#simulacro">Simulacro</a>
-    <a href="#dia">Viernes</a>
+    <a href="#formulas">Fórmulas</a>
+    <a href="#pares">Pares</a>
+    <a href="#diag">Qué preguntaron</a>
+    <a href="#dia">En la sala</a>
   </div>
 </nav>
 
 <main class="wrap">
+<section id="comunicado">
+  <h2>Lo que pidió el profe y lo que significa</h2>
+  <p class="sub">El comunicado llegó el jueves a medianoche. Trae la distribución exacta de preguntas y puntos, y eso cambia las prioridades más que cualquier otra cosa.</p>
 
-<section id="diag">
-  <h2>Qué preguntaron los controles</h2>
-  <p class="sub">Cada pregunta de los dos controles con lo que había que saber según la pauta. El profe dijo que el Control 2 es lo más parecido al certamen. En la Sección II, sin desarrollo no hay puntaje.</p>
-
-  <h3>Control 2 (el más parecido al certamen)</h3>
   <div class="tbl"><table>
-    <tr><th>Preg.</th><th>Tema</th><th>Lo que había que saber</th></tr>
-    <tr><td>1</td><td>SLA, SLO, SLI</td><td>SLA: contrato con consecuencia económica. SLO: meta interna, más exigente. SLI: la medición.</td></tr>
-    <tr><td>2</td><td>Elasticidad</td><td>Horizontal + automática + en los dos sentidos. Requiere servicio sin estado.</td></tr>
-    <tr><td>3</td><td>Cuenta de control y paquete de planificación</td><td>La cuenta de control integra alcance, presupuesto y cronograma; el paquete de planificación va bajo ella.</td></tr>
-    <tr><td>4</td><td>Validar el alcance vs controlar la calidad</td><td>Primero controlar la calidad (equipo, corrección); después validar el alcance (cliente, aceptación). Ambos de monitoreo y control.</td></tr>
-    <tr><td>5</td><td>Estabilización de recursos</td><td>Mover dentro de la holgura sin cambiar la fecha de término ni la ruta crítica.</td></tr>
-    <tr><td>6</td><td>Granularidad en UCP</td><td>1 caso de 14 transacciones = 15; 4 casos de 4 = 40. Descomponer sube el tamaño: la granularidad se declara.</td></tr>
-    <tr><td>7</td><td>Cono de la incertidumbre</td><td>0,25× a 4× antes de los requisitos; el precio se firma en el punto más ancho.</td></tr>
-    <tr><td>8</td><td>Escalar un riesgo</td><td>Excede la autoridad del director; la organización lo asume y el equipo deja de monitorearlo.</td></tr>
-    <tr><td>9</td><td>Registro vs informe de riesgos</td><td>Registro = riesgos individuales; informe = riesgo general del proyecto.</td></tr>
-    <tr><td>10</td><td>TIER III sin caminos redundantes</td><td>TIER III exige mantenimiento concurrente, y eso supone caminos redundantes.</td></tr>
-    <tr><td>11</td><td>RAID no es respaldo</td><td>RAID da continuidad ante falla de disco; no protege del borrado ni la corrupción. Regla 3-2-1.</td></tr>
-    <tr><td>12</td><td>RFP</td><td>Lo que falta es la solución, y se evalúan metodología y equipo: RFP.</td></tr>
-    <tr><td>13</td><td>FPIF sobre el PTA</td><td>Sobre el PTA el vendedor absorbe todo: se comporta como precio fijo cerrado.</td></tr>
-    <tr><td>14</td><td>Costo de la calidad</td><td>Prevención, evaluación, fallas internas, fallas externas. El óptimo es un equilibrio, no máxima prevención.</td></tr>
-    <tr><td>15</td><td>Gestionar vs controlar la calidad</td><td>Auditor del proceso = gestionar la calidad; pruebas del entregable = controlar la calidad.</td></tr>
-    <tr><td>16</td><td>Disponibilidad con par redundante</td><td>Par 1 − (1 − 0,99)² = 99,99 %; serie 99,84 %; 69,09 min frente a 43,20: no cumple.</td></tr>
-    <tr><td>17</td><td>Árbol de decisión y punto de indiferencia</td><td>Costo cierto + P × impacto por rama; igualar y despejar p.</td></tr>
-    <tr><td>18</td><td>Ruta crítica, holgura total y libre</td><td>16 días, A-B-D-G; C con holgura total 2 y libre 0 (la holgura es de toda la cadena).</td></tr>
-    <tr><td>19</td><td>Compresión vs multa</td><td>Sólo sirven actividades críticas; P + Q = $6,5 M &lt; multa $7 M: conviene comprimir.</td></tr>
-    <tr><td>20</td><td>Racks y superficie</td><td>42U × ocupación; racks hacia arriba; m² × racks × (1 + reserva).</td></tr>
-    <tr><td>21</td><td>UCP esfuerzo total</td><td>12.100 HH: UCP 242 × 20 = 4.840 de programación ÷ 0,40.</td></tr>
-    <tr><td>22</td><td>Viabilidad de plazo y presupuesto</td><td>Evaluar las dos restricciones, dotación hacia arriba, conclusión escrita.</td></tr>
+    <tr><th>Materia</th><th>Preg.</th><th>Puntos</th><th>Peso</th><th>Formato probable</th><th>Dónde está aquí</th></tr>
+    <tr class="hot"><td>Estimación de Software</td><td class="n">6</td><td class="n">99</td><td class="n">27,5 %</td><td>1 alternativa + <b>5 desarrollos</b></td><td><a href="#est">Estimación a fondo</a> · Ej. A, F</td></tr>
+    <tr class="hot"><td>Requisitos, Alcance, Planificación y EDT</td><td class="n">6</td><td class="n">72</td><td class="n">20,0 %</td><td>4 alternativas + <b>2 desarrollos</b></td><td><a href="#plan2">Planificación a fondo</a> · Ej. B</td></tr>
+    <tr><td>Trabajos de Investigación</td><td class="n">6 (5)</td><td class="n">45</td><td class="n">12,5 %</td><td>5 alternativas; se elige 5 de 6</td><td><a href="#ti">Trabajos</a></td></tr>
+    <tr><td>Arquitectura de Software y nube</td><td class="n">5</td><td class="n">45</td><td class="n">12,5 %</td><td>5 alternativas</td><td><a href="#arq">Arquitectura</a> (recuadro del profe)</td></tr>
+    <tr><td>Calidad</td><td class="n">4</td><td class="n">45</td><td class="n">12,5 %</td><td>3 alternativas + <b>1 desarrollo</b></td><td><a href="#scr">Sala · Calidad · Riesgos</a> · Ej. D</td></tr>
+    <tr><td>Sala de Servidores</td><td class="n">3</td><td class="n">36</td><td class="n">10,0 %</td><td>2 alternativas + <b>1 desarrollo</b></td><td><a href="#scr">Sala · Calidad · Riesgos</a> · Ej. C</td></tr>
+    <tr><td>Gestión de los Riesgos</td><td class="n">2</td><td class="n">18</td><td class="n">5,0 %</td><td>2 alternativas</td><td><a href="#scr">Sala · Calidad · Riesgos</a> · Ej. E</td></tr>
+    <tr><td>Total</td><td class="n">32</td><td class="n">360</td><td class="n">100 %</td><td>22 alternativas (198) + 9 desarrollos (162)</td><td></td></tr>
   </table></div>
 
-  <h3>Control 1</h3>
-  <div class="tbl"><table>
-    <tr><th>Preg.</th><th>Tema</th><th>Lo que había que saber</th></tr>
-    <tr><td>1</td><td>ISO/IEC 25010:2023</td><td>Nueve características; capacidad de interacción (ex usabilidad), flexibilidad (ex portabilidad), seguridad operacional nueva.</td></tr>
-    <tr><td>2–4</td><td>RTO/RPO, ERS verificable, reglas de la EDT</td><td>RPO 0 exige replicación sincrónica; requisito con verbo ambiguo y adjetivo sin cifra no es verificable; la EDT no lleva flechas, paquetes de 8/80 h y dentro del período de reporte.</td></tr>
-    <tr><td>5</td><td>Dependencias discrecionales</td><td>Sólo las discrecionales se reordenan para acortar (fast tracking).</td></tr>
-    <tr><td>6</td><td>Coeficiente de ambiente EF</td><td>EF &gt; 1 es ambiente desfavorable: la fórmula tiene pendiente negativa.</td></tr>
-    <tr><td>7</td><td>Horas nominales</td><td>Dividir por horas nominales subestima el costo en torno a 20 %.</td></tr>
-    <tr><td>8</td><td>Ventana de consultas</td><td>Es la transacción crítica: la última instancia en que las reglas se pueden mover.</td></tr>
-    <tr><td>9</td><td>Riesgo residual y secundario</td><td>Deducible del seguro = residual; que la aseguradora demore el pago = secundario.</td></tr>
-    <tr><td>10</td><td>PUE y DCiE</td><td>Medidor de la compañía ÷ PDU. PUE 1,0 imposible.</td></tr>
-    <tr><td>11</td><td>Densidad por rack</td><td>El aire llega a ≈20 kW por rack; sobre eso, refrigeración líquida o puerta trasera.</td></tr>
-    <tr><td>12</td><td>Disponibilidad en serie</td><td>Producto de las disponibilidades; caída = (1 − A) × 43.200.</td></tr>
-    <tr><td>13</td><td>EMV del registro</td><td>Σ P × I = $12 M = 5 % de los costos directos; sumar impactos sin ponderar es la trampa.</td></tr>
-    <tr><td>14</td><td>Ruta crítica</td><td>18 días, dos rutas críticas (A-C-F-H y A-D-G-H); holgura total de E = 5.</td></tr>
-    <tr><td>15</td><td>SS/FF con retraso</td><td>SS depende del inicio de la predecesora; FF se ancla al final. B se alarga 2 semanas → fin en la 23.</td></tr>
-    <tr><td>16</td><td>Dimensionamiento eléctrico</td><td>TI → UPS → sitio (× PUE) → generador; calor = carga TI.</td></tr>
-    <tr><td>17</td><td>UCP esfuerzo total</td><td>9.450 HH: UCP 189 × 20 = 3.780 de programación ÷ 0,40.</td></tr>
-    <tr><td>18</td><td>Viabilidad de plazo y presupuesto</td><td>Mismo tema que la 22 del Control 2: evaluar las dos restricciones y concluir.</td></tr>
-  </table></div>
-
-  <div class="note"><b>Patrón de los controles.</b> Casi ninguna pregunta pide una definición: piden reconocer cuál de dos conceptos parecidos aparece en un caso. La técnica es buscar en el enunciado la frase concreta que separa los dos conceptos («sin mover la fecha», «lo acepta el cliente», «falta la solución») antes de mirar las alternativas.</div>
+  <div class="note blue"><b>Cómo saqué el formato.</b> El profe no dice cuántas son de desarrollo. Pero si se mantiene lo de los controles (9 puntos la alternativa, 18 la de desarrollo), sólo hay una combinación que cuadra con los puntos de cada materia: la de la tabla. Por ejemplo, Estimación: 6 preguntas y 99 puntos sólo salen con 1 × 9 + 5 × 18. Es una inferencia, pero las cuentas no dejan otra.</div>
 
   <div class="grid2">
-    <div class="card"><h4>Prioridad 1 · lo que más puntaje mueve</h4><ul>
-      <li><b>Arquitectura de Software completa:</b> es la unidad más grande (11 secciones). Entra entera al certamen junto con los trabajos de investigación, que son todos de arquitectura.</li>
-      <li><b>Pares de conceptos</b> de las otras unidades: son la mayoría de la Sección I.</li>
-      <li><b>Viabilidad UCP, árbol de decisión y sala de servidores:</b> los cálculos con más trampas.</li></ul></div>
-    <div class="card"><h4>Prioridad 2 · el resto de los cálculos</h4><ul>
-      <li>Disponibilidad, ruta crítica, compresión, UCP y EMV: al menos un ejercicio completo de cada uno.</li>
-      <li>Sala de servidores: racks, superficie y eléctrico.</li>
-      <li>Lo nuevo de la carpeta: PMBOK capítulos 7 (costos y valor ganado) y 12 (adquisiciones), puntos de función.</li></ul></div>
+    <div class="card"><h4>Lo que esto cambia</h4><ul>
+      <li><b>Estimación y Planificación son 171 de 360 puntos</b>, y casi todo es desarrollo: es donde más rinde practicar, porque el procedimiento se repite.</li>
+      <li><b>Arquitectura son sólo 5 preguntas.</b> Si ya la estudiaste, hoy basta el recuadro del profe en esa sección.</li>
+      <li><b>Riesgos son 2 alternativas.</b> El árbol de decisión probablemente no viene como desarrollo. Repasa zonas y estrategias, no el árbol.</li>
+      <li><b>Sala y Calidad traen un desarrollo cada una:</b> lo más probable es el dimensionamiento (racks o eléctrico) y el costo de la calidad.</li></ul></div>
+    <div class="card"><h4>Lo que el profe pide hacer</h4><ul>
+      <li>UCP <b>sin apuntes</b>, completo, y preguntarse qué pasa si cambia un factor o un módulo.</li>
+      <li>Redes con FS, SS y FF, adelantos y retrasos, <b>dibujadas a mano</b> con su Gantt.</li>
+      <li>Rehacer los Controles 1 y 2.</li>
+      <li>Procedimiento completo en los desarrollos; dos decimales; HH y personas enteras.</li>
+      <li>No quedarse pegado: avanzar y volver.</li>
+      <li>En los trabajos de investigación, <b>no se responde la pregunta de tu propio trabajo</b>.</li></ul></div>
   </div>
 </section>
 
+
 <section id="plan">
-  <h2>Plan horario</h2>
-  <p class="sub">Jueves de 10:00 a 23:30 con pausas, ocho horas de sueño, y el viernes hasta las 14:30. Marca cada ítem al terminarlo; el avance queda guardado en este navegador.</p>
+  <h2>Plan del viernes</h2>
+  <p class="sub">De 08:00 a 14:30, ordenado por puntos. Marca cada ítem al terminarlo; el avance queda guardado en este navegador.</p>
   <div class="progress" id="planProgress">0 de 0 ítems</div>
   <div class="meter"><i id="planMeter"></i></div>
 
-  <div class="day">Jueves 15</div>
-  <div class="block"><div class="time">10:00<small>20 min</small></div><div>
-    <h4>Arranque <span class="prio p3">P3</span></h4>
-    <ul>
-      <li><label><input type="checkbox" id="j1"><span>Leer «Qué preguntaron los controles» y la sección «Viernes» al final, para saber hacia dónde vas</span></label></li>
-      <li><label><input type="checkbox" id="j2"><span>Si el profe ya mandó el comunicado, leerlo y marcar lo que destaca</span></label></li>
-    </ul></div></div>
-
-  <div class="block"><div class="time">10:20<small>2 h</small></div><div>
-    <h4>Arquitectura I: fundamentos, lógica, física, nube <span class="prio p1">P1</span></h4>
-    <p>Lee las tarjetas 1 a 4 de la sección <a href="#arq">Arquitectura</a>. Si un concepto no te queda claro, abre el PDF FEP01 en esa lámina y nada más.</p>
-    <ul>
-      <li><label><input type="checkbox" id="j3"><span>1 · Fundamentos e ISO 25010 · 2 · Estilos lógicos, APIs, resiliencia, eventos</span></label></li>
-      <li><label><input type="checkbox" id="j4"><span>3 · OSI, zonas de red, VM vs contenedor, quórum, RAID</span></label></li>
-      <li><label><input type="checkbox" id="j5"><span>4 · IaaS/PaaS/SaaS, zonas de disponibilidad, serverless y modelos de cómputo</span></label></li>
-      <li><label><input type="checkbox" id="j6"><span>Simulacro, filtro «Arquitectura», preguntas 1 a 19</span></label></li>
-    </ul></div></div>
-
-  <div class="block rest"><div class="time">12:20<small>10 min</small></div><div><h4>Pausa</h4></div></div>
-
-  <div class="block"><div class="time">12:30<small>1 h</small></div><div>
-    <h4>Arquitectura II: calidad, continuidad, seguridad, identidad, entrega <span class="prio p1">P1</span></h4>
-    <ul>
-      <li><label><input type="checkbox" id="j7"><span>Tarjetas 5 a 9 de Arquitectura</span></label></li>
-      <li><label><input type="checkbox" id="j8"><span>Simulacro, filtro «Arquitectura», preguntas 20 a 32</span></label></li>
-    </ul></div></div>
-
-  <div class="block rest"><div class="time">13:30<small>1 h</small></div><div><h4>Almuerzo</h4></div></div>
-
-  <div class="block"><div class="time">14:30<small>1 h</small></div><div>
-    <h4>Tendencias y trabajos de investigación <span class="prio p1">P1</span></h4>
-    <p>Tarjeta 10 de Arquitectura y la sección <a href="#ti">Trabajos de investigación</a>. Si tienes tiempo, hojea las presentaciones (son cortas); los informes no.</p>
-    <ul>
-      <li><label><input type="checkbox" id="j9"><span>Seis trabajos: Kubernetes/GitOps, Serverless/Edge, Lakehouse, Eventos, Observabilidad/SRE, Zero Trust</span></label></li>
-      <li><label><input type="checkbox" id="j10"><span>Simulacro, filtro «Investigación»</span></label></li>
-    </ul></div></div>
-
-  <div class="block"><div class="time">15:30<small>1 h 45</small></div><div>
-    <h4>Cálculos con más trampas, en papel <span class="prio p1">P1</span></h4>
-    <p>Los que más puntaje costaron en los controles. Hazlos sin mirar el desarrollo y escribiendo la conclusión.</p>
-    <ul>
-      <li><label><input type="checkbox" id="j11"><span>Ej. 2 y 3 · Viabilidad UCP (completa y corta)</span></label></li>
-      <li><label><input type="checkbox" id="j12"><span>Ej. 4 · Árbol de decisión y punto de indiferencia</span></label></li>
-      <li><label><input type="checkbox" id="j13"><span>Ej. 5 · Racks, superficie y eléctrico</span></label></li>
-      <li><label><input type="checkbox" id="j14"><span>Ej. 6 y 7 · RAID, quórum y workers, dimensionamiento</span></label></li>
-    </ul></div></div>
-
-  <div class="block rest"><div class="time">17:15<small>15 min</small></div><div><h4>Pausa</h4></div></div>
-
-  <div class="block"><div class="time">17:30<small>1 h 30</small></div><div>
-    <h4>Resto de los cálculos <span class="prio p2">P2</span></h4>
-    <ul>
-      <li><label><input type="checkbox" id="j15"><span>Ej. 1 · Disponibilidad · Ej. 8 · Ruta crítica · Ej. 9 · Compresión</span></label></li>
-      <li><label><input type="checkbox" id="j16"><span>Ej. 10 · Reservas · Ej. 11 · Tarifa · Ej. 12 · FPIF · Ej. 13 · TCO</span></label></li>
-      <li><label><input type="checkbox" id="j17"><span>Ej. 14 · Puntos de función · Ej. 15 · Valor ganado · Ej. 16 · PERT</span></label></li>
-    </ul></div></div>
-
-  <div class="block rest"><div class="time">19:00<small>1 h</small></div><div><h4>Cena</h4></div></div>
-
-  <div class="block"><div class="time">20:00<small>1 h 15</small></div><div>
-    <h4>Pares de las otras unidades y PMBOK <span class="prio p1">P1</span></h4>
-    <p>Sección <a href="#pares">Pares</a>, con foco en las filas marcadas con ★. Después el simulacro con el filtro «Gestión».</p>
-    <ul>
-      <li><label><input type="checkbox" id="j18"><span>Pares: alcance, cronograma, estimación, riesgo, sala, contratos y calidad</span></label></li>
-      <li><label><input type="checkbox" id="j19"><span>PMBOK capítulos 5, 6, 7, 8, 11 y 12: procesos y salidas</span></label></li>
-      <li><label><input type="checkbox" id="j20"><span>Simulacro, filtro «Gestión»</span></label></li>
-    </ul></div></div>
-
-  <div class="block"><div class="time">21:15<small>1 h 15</small></div><div>
-    <h4>Simulacro completo con cronómetro <span class="prio p1">P1</span></h4>
-    <p>Reinicia el simulacro y hazlo entero a 1,5 minutos por pregunta. Anota en papel el número de cada pregunta fallada.</p>
-    <ul>
-      <li><label><input type="checkbox" id="j21"><span>Simulacro completo, sin mirar apuntes</span></label></li>
-      <li><label><input type="checkbox" id="j22"><span>Releer la explicación de cada pregunta fallada</span></label></li>
-    </ul></div></div>
-
-  <div class="block"><div class="time">22:30<small>40 min</small></div><div>
-    <h4>Hoja de fórmulas de memoria <span class="prio p2">P2</span></h4>
-    <ul><li><label><input type="checkbox" id="j23"><span>Escribir la sección Fórmulas de memoria y corregirla</span></label></li></ul></div></div>
-
-  <div class="block rest"><div class="time">23:30<small>8 h</small></div><div><h4>Dormir</h4><p>Con un certamen a las 15:50, dormir bien vale más que una hora extra de noche. Mañana hay tiempo.</p></div></div>
-
   <div class="day">Viernes 16</div>
-  <div class="block"><div class="time">08:00<small>1 h 30</small></div><div>
-    <h4>Calibración final con el Control 2 <span class="prio p1">P1</span></h4>
-    <p>Rehaz el Control 2 completo en 60 minutos con cronómetro, como si fuera el certamen. Después corrige con la pauta.</p>
+  <div class="block"><div class="time">08:00<small>15 min</small></div><div>
+    <h4>Leer el comunicado y esta página <span class="prio p3">P3</span></h4>
+    <ul><li><label><input type="checkbox" id="f1"><span>Tabla de arriba y el recuadro «Lo que esto cambia»</span></label></li></ul></div></div>
+
+  <div class="block"><div class="time">08:15<small>1 h 20</small></div><div>
+    <h4>Estimación · 99 pts <span class="prio p1">P1</span></h4>
+    <p>Primero lee <a href="#est">Estimación a fondo</a>. Después resuelve en papel, sin mirar nada.</p>
     <ul>
-      <li><label><input type="checkbox" id="v1"><span>Control 2 completo en 60 minutos</span></label></li>
-      <li><label><input type="checkbox" id="v2"><span>Corregir con la pauta y anotar los errores</span></label></li>
+      <li><label><input type="checkbox" id="f2"><span>Leer «Estimación a fondo», sobre todo la sensibilidad y la viabilidad</span></label></li>
+      <li><label><input type="checkbox" id="f3"><span>Ej. A · UCP completo, sensibilidad y viabilidad (el más importante del día)</span></label></li>
+      <li><label><input type="checkbox" id="f4"><span>Control 1, preguntas 17 y 18 (SmartGrid-Andes) rehechas sin pauta</span></label></li>
+      <li><label><input type="checkbox" id="f5"><span>Ej. F · Puntos de función con clasificación</span></label></li>
     </ul></div></div>
 
-  <div class="block"><div class="time">09:30<small>2 h</small></div><div>
-    <h4>Cerrar brechas <span class="prio p1">P1</span></h4>
-    <p>Si llegó el comunicado del profe, este bloque se usa para lo que él destaque. Si no, para lo que fallaste en la calibración y en el simulacro de anoche.</p>
+  <div class="block"><div class="time">09:35<small>1 h</small></div><div>
+    <h4>Planificación · 72 pts <span class="prio p1">P1</span></h4>
     <ul>
-      <li><label><input type="checkbox" id="v3"><span>Repasar los temas fallados (tarjetas y pares)</span></label></li>
-      <li><label><input type="checkbox" id="v4"><span>Rehacer las preguntas falladas del simulacro</span></label></li>
-      <li><label><input type="checkbox" id="v5"><span>Rehacer los ejercicios que no salieron a la primera</span></label></li>
+      <li><label><input type="checkbox" id="f6"><span>Leer «Planificación a fondo»: relaciones, holguras, comportamiento humano</span></label></li>
+      <li><label><input type="checkbox" id="f7"><span>Ej. B · Red con FS, SS, FF, adelanto y retraso: dibujar red y Gantt a mano</span></label></li>
+      <li><label><input type="checkbox" id="f8"><span>Control 1, pregunta 15 (NimbusPay) rehecha sin pauta</span></label></li>
     </ul></div></div>
 
-  <div class="block rest"><div class="time">11:30<small>1 h 30</small></div><div><h4>Almuerzo y descanso</h4><p>Lejos de la materia.</p></div></div>
+  <div class="block rest"><div class="time">10:35<small>10 min</small></div><div><h4>Pausa</h4></div></div>
+
+  <div class="block"><div class="time">10:45<small>50 min</small></div><div>
+    <h4>Sala, Calidad y Riesgos · 99 pts <span class="prio p1">P1</span></h4>
+    <ul>
+      <li><label><input type="checkbox" id="f9"><span>Leer «Sala · Calidad · Riesgos»</span></label></li>
+      <li><label><input type="checkbox" id="f10"><span>Ej. C · Sala completa · Ej. D · Costo de la calidad</span></label></li>
+      <li><label><input type="checkbox" id="f11"><span>Ej. E · Zonas de riesgo y cuándo conviene una respuesta</span></label></li>
+    </ul></div></div>
+
+  <div class="block"><div class="time">11:35<small>35 min</small></div><div>
+    <h4>Simulacro en modo certamen <span class="prio p1">P1</span></h4>
+    <p>En la sección <a href="#simulacro">Simulacro</a>, botón «Modo certamen»: 23 preguntas con la proporción del profe. 1,5 min cada una, sin mirar.</p>
+    <ul><li><label><input type="checkbox" id="f12"><span>Una tanda completa y releer las explicaciones de las falladas</span></label></li></ul></div></div>
+
+  <div class="block rest"><div class="time">12:10<small>50 min</small></div><div><h4>Almuerzo y descanso</h4><p>Lejos de la materia.</p></div></div>
 
   <div class="block"><div class="time">13:00<small>1 h</small></div><div>
-    <h4>Repaso liviano <span class="prio p2">P2</span></h4>
+    <h4>Cierre <span class="prio p2">P2</span></h4>
     <ul>
-      <li><label><input type="checkbox" id="v6"><span>Hoja de fórmulas de memoria, una última vez</span></label></li>
-      <li><label><input type="checkbox" id="v7"><span>Leer la sección «Viernes». Nada de materia nueva</span></label></li>
+      <li><label><input type="checkbox" id="f13"><span>Hoja de fórmulas de memoria, y corregirla con la sección Fórmulas</span></label></li>
+      <li><label><input type="checkbox" id="f14"><span>Trabajos de investigación: releer las cifras de cada tarjeta</span></label></li>
+      <li><label><input type="checkbox" id="f15"><span>Una segunda tanda del modo certamen, si queda tiempo</span></label></li>
+      <li><label><input type="checkbox" id="f16"><span>Leer «En la sala», al final</span></label></li>
     </ul></div></div>
-  <div class="block rest"><div class="time">14:30<small></small></div><div><h4>Salir con calculadora</h4></div></div>
+  <div class="block rest"><div class="time">14:30<small></small></div><div><h4>Salir con calculadora</h4><p>Sin apuntes ni dispositivos con red.</p></div></div>
+</section>
+
+<section id="est">
+  <h2>Estimación a fondo · 99 puntos</h2>
+  <p class="sub">Cinco desarrollos probables. El profe pide tres cosas: el método completo sin apuntes, saber qué pasa si algo cambia, y no confundir plazo, dotación y presupuesto.</p>
+
+  <h3>La cadena, en diez pasos</h3>
+  <div class="tbl"><table>
+    <tr><th>Paso</th><th>Cálculo</th><th>Cuidado</th></tr>
+    <tr><td>1 · UAW</td><td>API × 1 + protocolo o texto × 2 + persona con GUI × 3</td><td>Un actor es un rol, no una persona: 5.000 vecinos = 1 actor de peso 3.</td></tr>
+    <tr><td>2 · UUCW</td><td>1–3 transacciones × 5 · 4–7 × 10 · 8 o más × 15</td><td>Transacción = ida y vuelta actor → sistema → actor.</td></tr>
+    <tr><td>3 · UUCP</td><td>UAW + UUCW</td><td>Los actores son sólo 5–15 % del total.</td></tr>
+    <tr><td>4 · TCF</td><td>0,6 + 0,01 × Σ (peso × valor)</td><td>Base 0,6 (en puntos de función es 0,65). Rango 0,60 a 1,30.</td></tr>
+    <tr><td>5 · EF</td><td>1,4 − 0,03 × Σ (peso × valor)</td><td>E7 y E8 pesan −1: restan en la suma. Rango 0,42 a 1,70.</td></tr>
+    <tr><td>6 · UCP</td><td>UUCP × TCF × EF, a dos decimales</td><td>Redondear sólo al final de cada paso, no antes.</td></tr>
+    <tr><td>7 · CF</td><td>Contar desfavorables: E1–E6 &lt; 3 y E7–E8 &gt; 3</td><td>Estrictamente: un 3 no cuenta. Ver la regla abajo.</td></tr>
+    <tr><td>8 · E programación</td><td>UCP × CF</td><td>Es sólo el 40 %: la trampa de la alternativa a).</td></tr>
+    <tr><td>9 · E total</td><td>E programación ÷ 0,40 → HH entero</td><td>Por etapa: análisis 10, diseño 20, programación 40, pruebas 15, sobrecarga 15.</td></tr>
+    <tr><td>10 · Costo</td><td>E total × tarifa</td><td>Luego plazo, dotación y presupuesto (abajo).</td></tr>
+  </table></div>
+
+  <div class="grid2">
+    <div class="card"><div class="k">Pesos de los factores técnicos</div><ul>
+      <li><b>Peso 2:</b> T1 sistema distribuido, T8 portabilidad.</li>
+      <li><b>Peso 0,5:</b> T6 facilidad de instalación, T7 facilidad de uso.</li>
+      <li><b>Peso 1:</b> todos los demás (T2–T5, T9–T13). Suma de pesos = 14.</li>
+      <li>Todo en 3 da ΣT = 42 y TCF = 1,02: no ajusta casi nada.</li></ul></div>
+    <div class="card"><div class="k">Pesos de los factores de ambiente</div><ul>
+      <li><b>E1</b> modelo de proyecto <b>1,5</b> · <b>E2</b> experiencia en el negocio <b>0,5</b> · <b>E3</b> orientación a objetos <b>1</b> · <b>E4</b> analista <b>0,5</b></li>
+      <li><b>E5</b> motivación <b>1</b> · <b>E6</b> estabilidad de requisitos <b>2</b></li>
+      <li><b>E7</b> tiempo parcial <b>−1</b> · <b>E8</b> dificultad del lenguaje <b>−1</b></li>
+      <li>En los controles el enunciado trae los pesos entre paréntesis. Igual conviene saber cuáles pesan más.</li></ul></div>
+  </div>
+
+  <div class="note"><b>Ojo con la regla del factor de conversión.</b> La clase dice: 0–2 desfavorables → 20 h; 3 o 4 → 28 h; 5 o más → replantear. Pero el enunciado del Control 2 decía: 0–2 → 20; <b>exactamente 3</b> → 28; <b>más de 3</b> → replantear. En el certamen usa la que traiga el enunciado, y si no trae ninguna, la de la clase y lo declaras.</div>
+
+  <h3>Qué pasa si algo cambia (sensibilidad)</h3>
+  <p>Se cambia un parámetro a la vez, se rehace la cadena y se compara: variación = (nuevo − base) ÷ base. El ejemplo de la clase (municipalidad, base 6.355 HH):</p>
+  <div class="tbl"><table>
+    <tr><th>Cambio</th><th>Esfuerzo</th><th>Variación</th><th>Por qué</th></tr>
+    <tr><td>CF de 20 a 28</td><td class="n">8.900 h</td><td class="n">+40 %</td><td>Multiplica todo. Es el parámetro más sensible.</td></tr>
+    <tr><td>Tres casos de uso medios más</td><td class="n">7.770 h</td><td class="n">+22 %</td><td>El esfuerzo es proporcional al UUCP.</td></tr>
+    <tr><td>Equipo promedio, EF = 1,00</td><td class="n">7.390 h</td><td class="n">+16 %</td><td>Cada punto de ΣE mueve el EF en 0,03.</td></tr>
+    <tr><td>Sistema promedio, TCF = 1,00</td><td class="n">5.805 h</td><td class="n">−9 %</td><td>Cada punto de ΣT mueve el TCF sólo en 0,01.</td></tr>
+  </table></div>
+  <div class="grid2">
+    <div class="card"><h4>Las direcciones, para no equivocarse</h4><ul>
+      <li><b>E1 a E6 suben</b> (equipo mejor) → ΣE sube → EF baja → <b>menos esfuerzo</b>.</li>
+      <li><b>E7 o E8 suben</b> (más tiempo parcial, lenguaje difícil) → ΣE baja → EF sube → <b>más esfuerzo</b>.</li>
+      <li><b>Un T sube</b> → TCF sube → más esfuerzo, pero poco: un T de peso 2 que sube dos puntos mueve ≈ 4 %.</li>
+      <li><b>Se agrega o quita un módulo</b> → se recuentan sus casos de uso (y sus actores si trae integraciones) → el UUCP cambia y el esfuerzo cambia en la misma proporción.</li>
+      <li>El efecto de un factor es su peso por el cambio: E6 (peso 2) mueve el doble que E3 (peso 1).</li></ul></div>
+    <div class="card"><h4>El salto que más se pregunta</h4><ul>
+      <li>Si un factor de ambiente <b>cruza el umbral</b> (un E1–E6 baja de 3 a 2, o un E7–E8 sube de 3 a 4) puede cambiar la cuenta de desfavorables y el CF pasa de 20 a 28: <b>+40 % de una vez</b>, además del efecto en el EF.</li>
+      <li>Un factor que ya era desfavorable y empeora (E6 de 2 a 1) sólo mueve el EF: un efecto pequeño.</li>
+      <li>Conclusión que el profe quiere leer: «el parámetro dominante es el factor de conversión; el segundo, que el modelo de casos de uso esté completo; el ajuste técnico casi no mueve la aguja».</li></ul></div>
+  </div>
+
+  <h3>Plazo, dotación y presupuesto no son lo mismo</h3>
+  <div class="tbl"><table>
+    <tr><th>Restricción</th><th>Cálculo</th><th>Se compara con</th><th>Qué la arregla</th></tr>
+    <tr><td>Plazo</td><td>HH ÷ (personas disponibles × h/mes)</td><td>Plazo máximo de las bases</td><td>Más personas, o menos alcance</td></tr>
+    <tr><td>Dotación</td><td>HH ÷ (plazo máximo × h/mes), hacia arriba</td><td>Personas que tiene la empresa</td><td>Contratar, o pedir más plazo en la ventana de consultas</td></tr>
+    <tr><td>Presupuesto</td><td>HH × tarifa</td><td>Presupuesto máximo</td><td>Menos alcance, otra tarifa o revisar el CF. <b>Agregar personas no lo cambia</b>: las horas son las mismas.</td></tr>
+  </table></div>
+  <div class="note blue"><b>Plantilla de conclusión:</b> «Con N ingenieros el proyecto requiere X meses frente a Y permitidos: (cumple / no cumple). Para cumplir el plazo se necesitan M ingenieros. El costo es $Z frente a $W: (cumple, con holgura de $… / excede en $…, un …%). Por lo tanto el proyecto (es / no es) viable…» Y en la vida real: duplicar el equipo no reduce el plazo a la mitad (comunicación, curva de aprendizaje, transferencia, rendimientos decrecientes).</div>
+
+  <h3>Punto de función, para la alternativa</h3>
+  <div class="grid2">
+    <div class="card"><ul>
+      <li><b>EI</b> entrada que mantiene un archivo interno · <b>EO</b> salida con dato calculado o derivado · <b>EQ</b> salida tal como está guardada.</li>
+      <li><b>ILF</b> grupo de datos que mantiene la aplicación · <b>EIF</b> grupo que mantiene otro sistema y la aplicación sólo consulta.</li>
+      <li>Se distinguen por el <b>propósito</b>, no por la pantalla. EO vs EQ es el error más frecuente.</li></ul></div>
+    <div class="card"><ul>
+      <li>Pesos baja/media/alta: EI 3/4/6 · EO 4/5/7 · EQ 3/4/6 · ILF 7/10/15 · EIF 5/7/10.</li>
+      <li>FP = UFP × (0,65 + 0,01 × ΣFi). 14 características de 0 a 5; ajuste máximo ±35 %.</li>
+      <li>Punto de función: no sabe nada del equipo. UCP: trae el ajuste del equipo (EF), pero depende del detalle de los casos de uso.</li></ul></div>
+  </div>
+
+  <h3>Errores que cuestan el desarrollo</h3>
+  <ul class="plain">
+    <li>Usar 20 sin contar los desfavorables, o contar un 3 como desfavorable.</li>
+    <li>Invertir el signo de E7 y E8.</li>
+    <li>Quedarse en UCP × CF y olvidar ÷ 0,40.</li>
+    <li>Contar usuarios en vez de roles, u olvidar los sistemas externos como actores.</li>
+    <li>Evaluar sólo una restricción de viabilidad, o redondear las personas hacia abajo.</li>
+    <li>No escribir la conclusión.</li>
+  </ul>
+</section>
+
+<section id="plan2">
+  <h2>Alcance, planificación y EDT a fondo · 72 puntos</h2>
+  <p class="sub">Dos desarrollos probables: una red con relaciones mixtas, dibujada a mano, y un escenario de atraso. Más cuatro alternativas de dependencias, compresión, comportamiento humano y EDT.</p>
+
+  <h3>Las cuatro relaciones, con su regla de cálculo</h3>
+  <div class="tbl"><table>
+    <tr><th>Relación</th><th>Se lee</th><th>Hacia adelante</th><th>Hacia atrás (para la predecesora A)</th></tr>
+    <tr><td>FS + k (Fin-Inicio)</td><td>B empieza cuando A termina</td><td class="n">IT(B) = FT(A) + k</td><td class="n">FTa(A) = ITa(B) − k</td></tr>
+    <tr><td>SS + k (Inicio-Inicio)</td><td>B empieza cuando A empieza</td><td class="n">IT(B) = IT(A) + k</td><td class="n">ITa(A) = ITa(B) − k</td></tr>
+    <tr><td>FF + k (Fin-Fin)</td><td>B termina cuando A termina</td><td class="n">FT(B) = FT(A) + k → IT(B) = FT(B) − dur</td><td class="n">FTa(A) = FTa(B) − k</td></tr>
+    <tr><td>SF + k (Inicio-Fin)</td><td>B termina cuando A empieza (la menos usada)</td><td class="n">FT(B) = IT(A) + k</td><td class="n">ITa(A) = FTa(B) − k</td></tr>
+  </table></div>
+  <div class="grid2">
+    <div class="card"><ul>
+      <li><b>Adelanto (lead):</b> la sucesora se anticipa. Se anota con <b>signo negativo</b>: FS − 2.</li>
+      <li><b>Retraso (lag):</b> espera, se anota positivo: FS + 2. <b>No consume horas ni recursos, pero sí días del plazo.</b></li>
+      <li>Con varias predecesoras: hacia adelante se toma el <b>mayor</b>; hacia atrás, el <b>menor</b>.</li></ul></div>
+    <div class="card"><ul>
+      <li><b>SS:</b> si A se alarga pero empieza a tiempo, B no se mueve; sólo crece la holgura de B.</li>
+      <li><b>FF:</b> la sucesora no se programa desde su inicio: se ancla en el final y se retrocede su duración.</li>
+      <li>Se lee siempre de la predecesora a la sucesora, y la sigla nombra primero el extremo de la predecesora.</li></ul></div>
+  </div>
+
+  <h3>Holguras y atrasos</h3>
+  <div class="tbl"><table>
+    <tr><th>Concepto</th><th>Cálculo</th><th>Qué significa</th></tr>
+    <tr><td>Holgura total (HT)</td><td class="n">ITa − IT = FTa − FT</td><td>Cuánto se atrasa sin mover el fin del proyecto. Ruta crítica = HT 0.</td></tr>
+    <tr><td>Holgura libre (HL)</td><td class="n">mín IT(sucesoras) − FT</td><td>Cuánto se atrasa sin mover el inicio temprano de ninguna sucesora. Con SS o FF se usa la fecha que corresponde a la relación.</td></tr>
+  </table></div>
+  <div class="tbl"><table>
+    <tr><th>Si una actividad se atrasa…</th><th>Lo que pasa</th></tr>
+    <tr><td>hasta su HL</td><td>No se mueve nada más.</td></tr>
+    <tr><td>más que su HL, hasta su HT</td><td>Se corren sus sucesoras, pero el proyecto termina en la misma fecha. Las sucesoras pierden holgura.</td></tr>
+    <tr><td>más que su HT</td><td><b>El proyecto se atrasa en (atraso − HT)</b> y la actividad pasa a la ruta crítica; puede cambiar la ruta crítica.</td></tr>
+    <tr><td>y es crítica</td><td>El proyecto se atrasa lo mismo que ella.</td></tr>
+  </table></div>
+  <p class="sub">Una holgura de varias actividades en cadena es compartida: si la primera la gasta, las siguientes se quedan sin ella.</p>
+
+  <h3>Cómo se dibuja a mano</h3>
+  <div class="gwrap">
+    <div>
+<svg class="net" viewBox="0 0 170 124" style="max-width:170px" role="img" aria-label="Caja de actividad: inicio temprano, duración, final temprano, nombre, inicio tardío, holgura, final tardío"><g class="nc" transform="translate(20,20)"><rect x="0" y="0" width="130" height="84" rx="4"/><path d="M0 26H130M0 58H130M43 0V26M87 0V26M43 58V84M87 58V84"/><text x="21.5" y="18">IT</text><text x="65" y="18">dur</text><text x="108.5" y="18">FT</text><text class="nm" x="65" y="47">Actividad</text><text x="21.5" y="76">ITa</text><text class="h" x="65" y="76">H</text><text x="108.5" y="76">FTa</text></g></svg>
+    </div>
+    <ol class="steps">
+      <li>Tabla con actividad, duración, predecesoras y tipo de relación.</li>
+      <li>Una caja por actividad, de izquierda a derecha según predecesoras. Flechas con la relación y el adelanto o retraso escrito si no es FS + 0.</li>
+      <li>Recorrido hacia adelante: IT y FT de cada caja. El mayor FT es la duración.</li>
+      <li>Recorrido hacia atrás desde el final: FTa e ITa.</li>
+      <li>Holgura en cada caja. Marca la ruta crítica (HT 0) con trazo grueso.</li>
+      <li>Gantt: eje horizontal en semanas, una barra por actividad desde IT hasta FT; la holgura como línea punteada después de la barra.</li>
+      <li>Conclusión escrita: duración, ruta crítica y la respuesta al escenario.</li>
+    </ol>
+  </div>
+
+  <div class="grid2">
+    <div class="card"><h4>Tipos de dependencia</h4><ul>
+      <li><b>Obligatoria</b> (lógica dura): por contrato, ley o naturaleza del trabajo. No se toca.</li>
+      <li><b>Discrecional</b> (lógica blanda): por buena práctica. <b>La única que se reordena para acortar</b> (fast tracking).</li>
+      <li><b>Externa:</b> con algo fuera del proyecto (el proveedor entrega equipos). Se documenta como supuesto y es riesgo.</li>
+      <li><b>Interna:</b> entre actividades del proyecto, bajo su control.</li></ul></div>
+    <div class="card"><h4>Comprimir y lo que cuesta</h4><ul>
+      <li><b>Intensificación (crashing):</b> más recursos en actividades <b>críticas</b>. Sube el costo. Se comprime la más barata por semana, mientras cueste menos que la multa. Sobre una no crítica no acorta nada.</li>
+      <li><b>Ejecución rápida (fast tracking):</b> en paralelo lo que iba en serie. Sube el riesgo y el retrabajo, no el costo directo.</li>
+      <li><b>Nivelación:</b> ajusta a la disponibilidad de recursos; suele alargar y cambiar la ruta crítica. <b>Estabilización:</b> dentro de la holgura; no mueve el fin.</li></ul></div>
+    <div class="card"><h4>Comportamiento humano</h4><ul>
+      <li><b>Ley de Parkinson:</b> el trabajo se extiende hasta ocupar todo el tiempo dado (10 días para un trabajo de 6 → dura 10).</li>
+      <li><b>Síndrome del estudiante:</b> se trabaja en serio sólo cerca de la fecha; la holgura se gasta al principio.</li>
+      <li><b>Procrastinación:</b> lo urgente y menor desplaza a lo crítico.</li>
+      <li>Consecuencia: la holgura repartida por actividad se consume dentro de cada una. <b>Conviene concentrar la reserva a nivel de proyecto.</b></li></ul></div>
+    <div class="card"><h4>Agregar gente no es lineal</h4><ul>
+      <li><b>Esfuerzo</b> (HH) no cambia con más personas; la <b>duración</b> sí. 160 HH con 2 personas a 8 h = 10 días hábiles.</li>
+      <li>Cuatro frenos: rendimientos decrecientes, transferencia de conocimiento, curva de aprendizaje, coordinación (los canales crecen más rápido que las personas).</li>
+      <li>«Nueve mujeres no producen un bebé en un mes.»</li>
+      <li>Técnicas de duración: análoga (baja exactitud), paramétrica, tres valores (PERT), ascendente (la más exacta y cara), análisis de reserva.</li></ul></div>
+    <div class="card"><h4>EDT y alcance</h4><ul>
+      <li><b>Regla del 100 %:</b> los hijos suman exactamente el trabajo del padre; ni huérfano ni duplicado.</li>
+      <li><b>La EDT no tiene secuencia</b> ni flechas ni fechas. El primer nivel recomendado: entregables.</li>
+      <li><b>Paquete de trabajo:</b> último nivel; regla 8/80 horas y cabe en un período de reporte. Fuera de la EDT se descompone en actividades.</li>
+      <li><b>Línea base del alcance</b> = enunciado + EDT + diccionario. <b>Cuenta de control</b> integra alcance, costo y cronograma.</li>
+      <li><b>Hito:</b> duración cero, binario. Externos (con el cliente), internos, miniatura.</li></ul></div>
+    <div class="card"><h4>Requisitos</h4><ul>
+      <li>ERS: no ambigua, completa, verificable, consistente, modificable, trazable, priorizada.</li>
+      <li>«Rápido», «amigable», «adecuado»: no verificables. Se arreglan con métrica y umbral.</li>
+      <li><b>Corrupción del alcance</b> la empuja el cliente; <b>exceso de funcionalidad</b> (gold plating) lo regala el equipo.</li>
+      <li><b>Controlar la calidad</b> (equipo, corrección) va antes que <b>validar el alcance</b> (cliente, aceptación formal).</li></ul></div>
+  </div>
+</section>
+
+<section id="scr">
+  <h2>Sala, Calidad y Riesgos · 99 puntos</h2>
+  <p class="sub">Siete alternativas y dos desarrollos (sala y calidad). Lo que el profe nombró: TIER, dimensionamiento, calidad vs grado, costo de la calidad, orden de las herramientas, requisito bien escrito, exposición, zonas y estrategias.</p>
+
+  <h3>Sala de servidores · 36 pts</h3>
+  <div class="tbl"><table>
+    <tr><th></th><th>TIER I</th><th>TIER II</th><th>TIER III</th><th>TIER IV</th></tr>
+    <tr><td>Caminos de distribución</td><td>Uno</td><td>Uno</td><td>Uno activo + uno alternativo</td><td>Dos activos</td></tr>
+    <tr><td>Componentes redundantes</td><td>No (N)</td><td>N+1</td><td>N+1</td><td>2(N+1)</td></tr>
+    <tr><td>Mantenimiento sin caída</td><td>No</td><td>No</td><td><b>Sí (concurrente)</b></td><td>Sí</td></tr>
+    <tr><td>Tolera falla imprevista</td><td>No</td><td>No</td><td>Parcialmente</td><td><b>Sí</b></td></tr>
+    <tr><td>Disponibilidad asociada</td><td class="n">99,671 %</td><td class="n">99,741 %</td><td class="n">99,982 %</td><td class="n">99,995 %</td></tr>
+    <tr><td>Caída al año</td><td class="n">≈ 28,8 h</td><td class="n">≈ 22,7 h</td><td class="n">≈ 1,6 h</td><td class="n">≈ 0,4 h</td></tr>
+  </table></div>
+  <div class="grid2">
+    <div class="card"><h4>Qué significa realmente un TIER</h4><ul>
+      <li>Lo define la <b>topología y la capacidad</b> (redundancia y caminos), <b>no la disponibilidad medida</b>. La disponibilidad es consecuencia.</li>
+      <li><b>No se hereda:</b> un servidor en un datacenter TIER III con un único enlace a la sucursal no da un servicio TIER III.</li>
+      <li>«TIER III» con un único UPS o un único camino es insostenible: mantener ese UPS apaga la sala.</li>
+      <li>N (justo) · N+1 (un repuesto, lo típico de una sala) · 2N (dos sistemas independientes) · 2(N+1) (fallar y mantener a la vez).</li>
+      <li>La redundancia también es de camino: dos UPS al mismo tablero no son redundantes.</li></ul></div>
+    <div class="card"><h4>Dimensionar: la cadena de la pauta</h4><ul>
+      <li>U totales → racks = U ÷ (42 × ocupación) hacia arriba → superficie = racks × m² × (1 + reserva).</li>
+      <li><b>Carga TI</b> = racks × kW/rack → <b>UPS</b> = TI × (1 + margen) → <b>sitio</b> = TI × PUE → <b>generador</b> = sitio × (1 + margen).</li>
+      <li><b>Calor</b> = carga TI (1 kW eléctrico = 1 kW de calor ≈ 3.412 BTU/h). El clima se dimensiona sobre TI, no sobre sitio.</li>
+      <li>PUE siempre multiplica; dividir es el error clásico. Medidor de la compañía ÷ PDU. PUE 1,0 no existe.</li>
+      <li>Carga térmica completa: equipos + UPS y pérdidas (3–8 %) + iluminación (10–15 W/m²) + personas (≈100 W) + envolvente + 20–30 % de holgura.</li></ul></div>
+    <div class="card"><h4>Energía y clima</h4><ul>
+      <li><b>UPS</b> cubre segundos (0–10 s); sólo <b>doble conversión</b> (on-line), siempre con bypass manual.</li>
+      <li><b>Generador</b> toma la carga en 8–15 s y cubre horas; debe cubrir <b>el clima</b>, no sólo los servidores.</li>
+      <li>Densidad: cómputo 8–12 kW/rack, blade 12–20, GPU 20–40. Sobre ≈ 20 kW/rack el aire no alcanza: puerta trasera refrigerada o líquido.</li>
+      <li>Clima de precisión, no de confort: ASHRAE 18–27 °C y 40–60 % HR en la toma de aire del equipo.</li></ul></div>
+  </div>
+
+  <h3>Calidad · 45 pts</h3>
+  <div class="grid2">
+    <div class="card"><h4>Las distinciones que confunden</h4><ul>
+      <li><b>Grado</b> = categoría de prestaciones; se decide y se negocia; un grado bajo declarado no es problema. <b>Calidad</b> = cumplir los requisitos prometidos; es obligación; <b>baja calidad siempre es problema</b>.</li>
+      <li><b>Calidad del proceso</b> (ISO 9001, CMMI, auditorías) vs <b>calidad del producto</b> (ISO 25010, pruebas).</li>
+      <li><b>Gestionar la calidad (QA):</b> mira el proceso, preventivo, auditorías. <b>Controlar la calidad (QC):</b> mira el entregable, detectivo, pruebas.</li>
+      <li>ISO 25010 <b>no se certifica</b>; ISO 9001 certifica el sistema de gestión; CMMI se evalúa por appraisal.</li></ul></div>
+    <div class="card"><h4>Costo de la calidad</h4><ul>
+      <li><b>Conformidad</b> (inversión, temprano): <b>prevención</b> (capacitación, estándares, revisiones de diseño, automatizar pruebas) y <b>evaluación</b> (pruebas, inspecciones, auditorías).</li>
+      <li><b>No conformidad</b> (consecuencia, tarde): <b>fallas internas</b> (las ve el equipo antes de entregar: retrabajo, repetir pruebas) y <b>fallas externas</b> (las ve el cliente: garantía, multas, soporte no previsto, reputación).</li>
+      <li><b>Óptimo:</b> el mínimo de la suma de las cuatro. No es «máxima prevención»: pasado el punto, más control ya no evita fallas equivalentes.</li>
+      <li>Regla de partida: 15–25 % del esfuerzo en prevención y evaluación.</li></ul></div>
+    <div class="card"><h4>Herramientas y requisito</h4><ul>
+      <li><b>Orden de uso:</b> <b>Pareto</b> (qué problema atacar) → <b>Ishikawa</b> (sus causas posibles) → <b>causa raíz</b> (cuál corregir).</li>
+      <li>Histograma: forma de la variación. Muestreo de aceptación: por atributos o por variables, cuando no se puede revisar todo.</li>
+      <li><b>Requisito de calidad, cinco partes:</b> atributo · métrica (unidad) · valor objetivo (con estadístico, p. ej. p95) · condición (carga, ambiente, horario) · método de verificación.</li>
+      <li>Tres procesos: planificar (plan y métricas), gestionar (ejecución), controlar (monitoreo y control).</li>
+      <li>Cinco niveles, de peor a mejor: el cliente encuentra los defectos → se detectan antes de entregar → se corrige el proceso → la calidad entra en el diseño → cultura de calidad.</li></ul></div>
+  </div>
+
+  <h3>Riesgos · 18 pts</h3>
+  <div class="tbl"><table>
+    <tr><th>Zona</th><th>Exposición P × I</th><th>Regla de acción</th><th>Dónde se ve</th></tr>
+    <tr><td>Crítica</td><td class="n">≥ 0,40</td><td>Cambiar el diseño o el alcance para que deje de existir (evitar), o no ofertar</td><td>Alcance, arquitectura o exclusión</td></tr>
+    <tr><td>Alta</td><td class="n">0,20 – 0,40</td><td>Mitigar con una acción costeada</td><td>Actividad en la EDT y el cronograma</td></tr>
+    <tr><td>Media</td><td class="n">0,08 – 0,20</td><td>Aceptar activamente: reserva y disparador</td><td>Línea de reserva en la oferta</td></tr>
+    <tr><td>Baja</td><td class="n">&lt; 0,08</td><td>Aceptar pasivamente: observar cada mes</td><td>Sólo en el registro</td></tr>
+  </table></div>
+  <div class="grid2">
+    <div class="card"><h4>Cómo se elige la estrategia</h4><ul>
+      <li>1 · <b>¿Quién controla el riesgo?</b> Nosotros → evitar o mitigar. Un tercero → transferir. Nadie en el proyecto → escalar.</li>
+      <li>2 · <b>¿La respuesta cuesta menos de lo que ahorra?</b> Ahorro esperado = VE antes − VE después. Si cuesta más, aceptar y reservar.</li>
+      <li>3 · <b>Umbral:</b> sobre el umbral no basta mitigar; hay que cambiar el diseño.</li>
+      <li><b>Retorno</b> = ahorro esperado ÷ costo. Costo cero con efecto (una consulta en el foro) = retorno infinito: se hace primero.</li></ul></div>
+    <div class="card"><h4>Vocabulario</h4><ul>
+      <li>Amenazas: escalar, evitar, transferir, mitigar, aceptar. Oportunidades: escalar, <b>explotar</b>, <b>compartir</b>, <b>mejorar</b>, aceptar.</li>
+      <li><b>Residual</b>: lo que queda (el deducible). <b>Secundario</b>: lo que crea la respuesta. <b>Disparador</b>: la señal.</li>
+      <li><b>Apetito</b> (postura estratégica) · <b>tolerancia</b> (desviación aceptada en un objetivo, con número) · <b>umbral</b> (punto que dispara una acción).</li>
+      <li>Registro = riesgos individuales; informe = riesgo general del proyecto.</li></ul></div>
+  </div>
 </section>
 
 <section id="arq">
   <h2>Arquitectura de Software, condensada</h2>
   <p class="sub">La unidad FEP01 tiene once secciones. Aquí está lo que se puede preguntar como distinción aplicada a un caso, sacado de las láminas.</p>
+
+  <div class="note blue"><b>Lo que pidió el profe para Arquitectura (5 alternativas):</b> consecuencias, no definiciones.
+    <ul class="plain">
+      <li><b>Por qué escala o no:</b> vertical tiene techo y sigue siendo punto único de falla; horizontal escala y da disponibilidad, pero sólo si la aplicación es <b>sin estado</b> (la sesión en un almacén compartido); la base de datos no siempre acompaña, repartirla es otro problema. Sesiones pegajosas o estado en el nodo impiden escalar bien.</li>
+      <li><b>Qué entrega cada modelo de servicio:</b> IaaS (hardware y virtualización; usted desde el SO), PaaS (usted sólo aplicación y datos), SaaS (todo el proveedor), FaaS (sólo el código de la función), CaaS (contenedores sin operar el clúster), DBaaS, IDaaS.</li>
+      <li><b>Cuándo cada modelo de ejecución</b>, cinco preguntas en orden: ¿software heredado que se instala en el servidor? → VM · ¿evento corto e intermitente? → funciones · ¿muchos servicios, equipos y despliegues, con gente que opere un clúster? → Kubernetes gestionado · ¿contenedores continuos sin administrar servidores? → contenedores sin servidor (Fargate) · si no, aplicación web gestionada (PaaS).</li>
+      <li><b>Costo según la carga:</b> estable → VM reservada; intermitente → funciones; en el medio → contenedores sin servidor.</li>
+      <li><b>Disponibilidad en serie:</b> se multiplica, y el total es menor que el peor componente; en paralelo, 1 − (1 − A)ⁿ.</li></ul></div>
 
   <div class="grid2">
     <div class="card"><div class="k">1 · Fundamentos</div><h4>Qué es y cómo se describe</h4><ul>
@@ -436,142 +639,181 @@ summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 
 <section id="ti">
   <h2>Trabajos de investigación</h2>
-  <p class="sub">Seis grupos, todos sobre arquitectura. Lo que se puede preguntar es la idea central y la conclusión de cada uno.</p>
+  <p class="sub">Seis preguntas, se responden cinco, y no se responde la de tu propio trabajo. El profe pide los conceptos centrales, las comparaciones entre alternativas y las cifras o ejemplos que destacó cada grupo: las cifras están al final de cada tarjeta.</p>
   <div class="grid2">
     <div class="card"><div class="k">TI-04 · VORA</div><h4>Kubernetes, GitOps e ingeniería de plataformas</h4><ul>
       <li>Idea común: declarar el <b>estado deseado</b> y que un <b>bucle de reconciliación</b> lo mantenga.</li>
       <li><b>GitOps:</b> Git es la fuente única de verdad; un agente (Argo CD) <b>jala</b> (pull) los cambios y reconcilia.</li>
       <li><b>Kubernetes no es multiinquilino por defecto:</b> se construye con espacios de nombres, RBAC, NetworkPolicy (default-deny) y cuotas.</li>
       <li>Costos: infraestructura, red (egreso) y factor humano. Spot hasta 88 % de ahorro en cargas tolerantes a fallos.</li>
-      <li>Conclusión: Kubernetes sólo se justifica con un equipo capaz de operarlo; si no, servicios gestionados.</li></ul></div>
+      <li>Conclusión: Kubernetes sólo se justifica con un equipo capaz de operarlo; si no, servicios gestionados.</li>
+      <li class="cf"><b>Cifras:</b> clúster 3×3 en zonas (9 nodos, 36 vCPU, 144 GiB); el cómputo es 69–83 % del gasto; Spot ahorra hasta 88 % ($0,192 → $0,023 por hora); subir el egreso de 2 a 10–15 TB/mes pasa los $1.000.</li></ul></div>
     <div class="card"><div class="k">TI-05 · TERABYTE</div><h4>Serverless y computación en el borde</h4><ul>
       <li>Cuatro modelos: funciones (FaaS), contenedores sin servidor, borde, y siempre encendido.</li>
       <li><b>Arranque en frío</b> según aislamiento: isolate V8 (≈2 ms) &lt; microVM (≈400 ms) &lt; contenedor (≈720 ms).</li>
       <li><b>Volumen de equilibrio:</b> sobre cierto volumen (24 M solicitudes/mes en su caso) la flota reservada es más barata que Lambda.</li>
       <li>Mitigar el frío (concurrencia aprovisionada) convierte el costo variable en piso fijo.</li>
-      <li>Caso: la latencia y 72 h sin enlace descartan un núcleo serverless remoto; núcleo local y borde serverless para el portal.</li></ul></div>
+      <li>Caso: la latencia y 72 h sin enlace descartan un núcleo serverless remoto; núcleo local y borde serverless para el portal.</li>
+      <li class="cf"><b>Cifras:</b> Lambda máximo 15 min; arranque en frío Workers ≈ 2 ms, Lambda ≈ 396 ms, Cloud Run ≈ 719 ms; equilibrio 24 M solicitudes/mes (512 MB, 200 ms); la reserva EC2 baja 37,5 % a 1 año y 59 % a 3; el núcleo del caso tiene un par de millones al mes, muy por debajo.</li></ul></div>
     <div class="card"><div class="k">TI-07 · ONLY SIMPLE</div><h4>Plataformas de datos: lakehouse</h4><ul>
       <li>Warehouse (curado, BI) → lake (crudo, barato) → <b>lakehouse</b> (formato abierto + catálogo).</li>
       <li><b>Medallón:</b> bronce (crudo) → plata (limpio) → oro (agregados de negocio).</li>
       <li><b>ETL</b> transforma antes de cargar (sirve para enmascarar); <b>ELT</b> carga crudo y transforma en destino.</li>
       <li>Formatos abiertos de tabla (Iceberg, Delta, Hudi): ACID, time travel, evolución de esquema.</li>
-      <li>Hallazgo: <b>el lock-in vive en el catálogo</b>, no en los archivos. Tener los archivos sólo da portabilidad de lectura.</li></ul></div>
+      <li>Hallazgo: <b>el lock-in vive en el catálogo</b>, no en los archivos. Tener los archivos sólo da portabilidad de lectura.</li>
+      <li class="cf"><b>Comparaciones:</b> Snowflake por crédito, Databricks por DBU, BigQuery por TiB escaneado, Redshift por RPU-hora, Fabric por capacidad fija. Ley 21.719: el derecho de supresión exige eliminación efectiva de los datos.</li></ul></div>
     <div class="card"><div class="k">TI-08 · BOCTOK</div><h4>Arquitecturas dirigidas por eventos</h4><ul>
       <li>Síncrono = acoplamiento temporal y caídas en cascada; asíncrono = desacoplamiento.</li>
       <li><b>Garantías:</b> at-most-once (puede perder), <b>at-least-once</b> (sin pérdida, exige deduplicar o consumidores idempotentes), exactly-once.</li>
       <li>Orden garantizado <b>por clave de partición</b>.</li>
       <li><b>Log distribuido (Kafka)</b> conserva y permite replay; <b>cola tradicional</b> (RabbitMQ/SQS) borra al consumir.</li>
       <li><b>Outbox + CDC (Debezium)</b> resuelve la doble escritura: el evento se guarda en la misma transacción que el dato.</li>
-      <li>Costo oculto: tráfico entre zonas (43 % del total en su caso). Eligieron Kafka por madurez, no por el mayor puntaje.</li></ul></div>
+      <li>Costo oculto: tráfico entre zonas (43 % del total en su caso). Eligieron Kafka por madurez, no por el mayor puntaje.</li>
+      <li class="cf"><b>Cifras:</b> ranking ponderado AutoMQ 4,16 &gt; Kafka 4,07 &gt; WarpStream 3,89 &gt; Confluent 3,82; costo mensual Kafka en EC2 $3.700,5 (inter-AZ $1.600 = 43,2 %), AutoMQ sobre S3 $325,9, Confluent $1.107,5–2.227,5; AutoMQ con p99 de 250–823 ms no sirve para flujos síncronos. Ganó Kafka: 15 años de madurez para un núcleo crítico.</li></ul></div>
     <div class="card"><div class="k">TI-09 · TRIPLE T</div><h4>Observabilidad y SRE</h4><ul>
       <li>Pilares: métricas, logs, trazas (y profiling). <b>Cuatro señales doradas:</b> latencia, tráfico, errores, saturación.</li>
       <li><b>OpenTelemetry:</b> estándar abierto que reduce el vendor lock-in; colector = receptor → procesador → exportador.</li>
       <li><b>SLI</b> = eventos buenos ÷ eventos válidos. <b>SLO más exigente que el SLA.</b></li>
       <li><b>Presupuesto de error = 100 % − SLO.</b> Si se agota, se congelan funcionalidades. <b>Burn rate</b> 14,4 agota el mes en ≈2 días.</li>
       <li><b>Muestreo tail-based</b> conserva las trazas con error; head-based es aleatorio.</li>
-      <li>Toil bajo el 50 % de la jornada; postmortems sin culpa.</li></ul></div>
+      <li>Toil bajo el 50 % de la jornada; postmortems sin culpa.</li>
+      <li class="cf"><b>Cifras:</b> SLO 99,5 % → presupuesto de error 0,5 %; burn rate 14,4 agota el mes en 2 días; ventanas de alerta 1 h, 6 h y 3 días; 100 servidores: Datadog $6.095, autogestionado $1.254,48, Grafana Cloud $514; 97 % de las consultas caen en las primeras 24 h (retención por niveles).</li></ul></div>
     <div class="card"><div class="k">TI-10 · KUBETECH</div><h4>Zero Trust, IAM/CIAM y SASE</h4><ul>
       <li>«Nunca confiar, siempre verificar». <b>NIST SP 800-207</b>; asume la brecha.</li>
       <li><b>PDP</b> (punto de decisión: motor + administrador de políticas) decide; <b>PEP</b> (punto de aplicación) intercepta y aplica.</li>
       <li><b>IAM</b> para funcionarios; <b>CIAM</b> para clientes, cobrado por usuario activo mensual (MAU).</li>
       <li><b>SASE = SD-WAN + SSE</b> (SWG, CASB, FWaaS, DLP, ZTNA).</li>
       <li><b>ZTNA vs VPN:</b> la VPN entrega la subred completa (movimiento lateral); ZTNA sólo la aplicación autorizada.</li>
-      <li>PAM e IGA: privilegios justo a tiempo, recertificación. Zero Trust no elimina la brecha: limita su alcance.</li></ul></div>
+      <li>PAM e IGA: privilegios justo a tiempo, recertificación. Zero Trust no elimina la brecha: limita su alcance.</li>
+      <li class="cf"><b>Cifras:</b> 500 internos + 50.000 externos ≈ USD 3.000–3.600 al mes; CIAM gratis hasta 50.000 MAU en el plan freemium; ciclo de altas y bajas con SCIM 2.0; TLS 1.3 con intercambio poscuántico.</li></ul></div>
   </div>
 </section>
 
-<section id="formulas">
-  <h2>Fórmulas</h2>
-  <p class="sub">Dos decimales en resultados intermedios; horas-hombre y personas enteras, y personas siempre hacia arriba.</p>
-
-  <h3>Disponibilidad y servicio</h3>
-<div class="f">Serie: A1 × A2 × …            Par (basta uno): 1 − (1 − A)²     Tres nodos: 1 − (1 − A)³
-Mes de 30 días = 43.200 min      Caída = (1 − A) × 43.200
-Disponibilidad período = (A − B) ÷ A × 100    (A = horas comprometidas, B = horas caídas)
-Presupuesto de error = 100 % − SLO        SLI = eventos buenos ÷ eventos válidos
-Quórum = ⌊N ÷ 2⌋ + 1                       Fallas toleradas = N − quórum</div>
-
-  <h3>Dimensionamiento físico</h3>
-<div class="f">Cómputo: usuarios × % concurrencia × op/min ÷ 60 = op/s → op/s × (1 + holgura) ÷ capacidad por nodo → ↑ → +1 (N+1)
-Workers = máx(vCPU pedida ÷ vCPU útil, RAM pedida ÷ RAM útil) → ↑ → +1
-RAID útil: 1 → 50 % · 5 → (N−1)/N · 6 → (N−2)/N · 10 → 50 %    Factor de compra = bruto ÷ útil
-RAID 10 «disco = C/2»: 4 discos de C/2 + 1 de reserva → factor ×2,5
-Racks = U totales ÷ (42 × ocupación máx) → ↑         Superficie = racks × m²/rack × (1 + reserva)
-Carga TI = racks × kW/rack → UPS × (1+m) · Sitio = TI × PUE · Generador = Sitio × (1+m) · Calor = TI (× 3.412 BTU/h)
-PUE = energía total (medidor) ÷ energía TI (PDU)       DCiE = 1/PUE en %</div>
-
-  <h3>Estimación</h3>
-<div class="f">UCP: UAW (1·API, 2·texto, 3·persona) + UUCW (5·1–3, 10·4–7, 15·8+) = UUCP
-TCF = 0,6 + 0,01·ΣT     EF = 1,4 − 0,03·ΣE     UCP = UUCP × TCF × EF
-Desfavorables: E1–E6 &lt; 3 y E7–E8 &gt; 3 → 0–2: 20 h · 3–4: 28 h · 5+: replantear
-E programación = UCP × CF → E total = ÷ 0,40 → etapas 10/20/40/15/15
-Plazo = E ÷ (personas × h/mes)    Personas = E ÷ (meses × h/mes) ↑    Costo = E × tarifa
-Puntos de función: EI 3/4/6 · EO 4/5/7 · EQ 3/4/6 · ILF 7/10/15 · EIF 5/7/10    TCF = 0,65 + 0,01·ΣFi
-PERT: tE = (O + 4M + P) ÷ 6 · σ = (P − O) ÷ 6 · ofertar tE + 2σ · Triangular (O+M+P)/3
-Tarifa: h prod = h × 0,80 → costo/h → + GG → + margen    Cono: 0,25×–4× (idea) … 1× (entrega)</div>
-
-  <h3>Cronograma y costos</h3>
-<div class="f">Adelante IT = máx FT preds · Atrás FTa = mín ITa sucs · HT = ITa − IT · HL = mín IT sucs − FT
-SS+k: IT_B = IT_A + k     FF+k: FT_B = FT_A + k (se ancla al final)
-Compresión: actividad crítica más barata, semana a semana, mientras cueste menos que la multa
-Valor ganado: CV = EV − AC · SV = EV − PV · CPI = EV/AC · SPI = EV/PV
-              EAC = BAC ÷ CPI = BAC × AC/EV · ETC = EAC − AC · VAC = BAC − EAC</div>
-
-  <h3>Riesgo y contratos</h3>
-<div class="f">EMV = P × I (oportunidad resta) · Reserva = Σ EMV · % = Σ EMV ÷ costos directos
-Línea base = paquetes + contingencia     Presupuesto = línea base + reserva de gestión
-Árbol: costo cierto + P × impacto, gana el menor · Indiferencia: igualar y despejar p
-FPIF: honorario = ganancia obj ± %vendedor × desviación · precio = costo + honorario (tope: techo)
-      PTA = costo obj + (techo − precio obj) ÷ %comprador
-TCO equilibrio: iA + aA·t = iB + aB·t → t = (iA − iB) ÷ (aB − aA)</div>
-</section>
-
-<section id="pares">
-  <h2>Pares de conceptos de las otras unidades</h2>
-  <p class="sub">Marcadas con ★ las que aparecieron en los controles y más se confunden.</p>
-  <div class="tbl"><table>
-    <tr><th>Concepto</th><th>Qué es</th><th>No confundir con</th></tr>
-    <tr><td>★ Cuenta de control</td><td>Punto de control donde se integran alcance, presupuesto y cronograma; se compara con el valor ganado. Tiene paquetes de trabajo.</td><td>Paquete de planificación: bajo la cuenta de control, trabajo conocido sin actividades detalladas. Paquete de trabajo: nivel más bajo.</td></tr>
-    <tr><td>★ Controlar la calidad</td><td>El equipo verifica que el entregable esté correcto. Ocurre antes.</td><td>Validar el alcance: el cliente o patrocinador acepta. Ocurre después. Ambos de monitoreo y control.</td></tr>
-    <tr><td>★ Dependencia discrecional</td><td>Lógica blanda; la única que se reordena para acortar (fast tracking).</td><td>Obligatoria (no se toca). Externa/interna es otro eje: quién controla.</td></tr>
-    <tr><td>★ Horas nominales</td><td>Usarlas subestima el costo ≈20 % (el real es ≈25 % mayor).</td><td>Horas productivas = 75–85 % de las nominales.</td></tr>
-    <tr><td>★ Cono de la incertidumbre</td><td>0,25×–4× antes de los requisitos; el precio se firma en lo más ancho; por eso existe la contingencia.</td><td>El cono se cierra con el avance, no al firmar.</td></tr>
-    <tr><td>★ Ventana de consultas</td><td>Transacción crítica de la licitación: última instancia para mover las reglas, a costo cero.</td><td>Entregar la oferta o firmar: ahí las reglas ya no se mueven.</td></tr>
-    <tr><td>★ Registro de riesgos</td><td>Riesgos individuales con su ficha.</td><td>Informe de riesgos: riesgo general del proyecto y resumen.</td></tr>
-    <tr><td>★ PUE</td><td>Medidor de la compañía ÷ PDU. Siempre multiplica. 1,0 imposible.</td><td>DCiE = el inverso en %.</td></tr>
-    <tr><td>★ RFP</td><td>Falta la solución; pide metodología, equipo y entregables además del precio.</td><td>RFI (falta información de mercado), RFQ (precio de algo especificado), IFB (pliego cerrado, menor precio).</td></tr>
-    <tr><td>★ PTA en FPIF</td><td>Desde el PTA, cada peso de sobrecosto lo paga el vendedor: precio fijo cerrado.</td><td>CPIF: misma fórmula de honorario, sin techo.</td></tr>
-    <tr><td>Escalar un riesgo</td><td>Lo excede al jefe de proyecto; lo toma la organización y el equipo deja de monitorearlo.</td><td>Mitigar, evitar, transferir y aceptar lo dejan en el proyecto.</td></tr>
-    <tr><td>Residual / secundario</td><td>Lo que queda tras la respuesta / lo que la respuesta creó.</td><td>Disparador: la señal que anuncia que ocurre.</td></tr>
-    <tr><td>Contingencia</td><td>Identificados, dentro de la línea base, la usa el jefe de proyecto.</td><td>Gestión: desconocidos, fuera de la línea base, la libera la gerencia. Margen: utilidad.</td></tr>
-    <tr><td>Corrupción del alcance</td><td>La empuja el cliente.</td><td>Exceso de funcionalidad: la regala el equipo.</td></tr>
-    <tr><td>Crashing</td><td>Más recursos en críticas; sube el costo.</td><td>Fast tracking: en paralelo; sube el riesgo.</td></tr>
-    <tr><td>Nivelación</td><td>Por disponibilidad de recursos; alarga el proyecto.</td><td>Estabilización: dentro de la holgura; no mueve el fin.</td></tr>
-    <tr><td>Holgura total</td><td>No mueve el fin del proyecto.</td><td>Holgura libre: no mueve el inicio temprano de la sucesora.</td></tr>
-    <tr><td>Calidad</td><td>Cumplir los requisitos prometidos; baja calidad siempre es problema.</td><td>Grado: categoría de prestaciones; se negocia.</td></tr>
-    <tr><td>Gestionar la calidad (QA)</td><td>Mira el proceso; preventivo; auditorías.</td><td>Controlar la calidad (QC): mira el producto; detectivo; pruebas.</td></tr>
-    <tr><td>Costo óptimo de calidad</td><td>El mínimo del costo total de las cuatro categorías.</td><td>No es «máxima prevención».</td></tr>
-    <tr><td>FFP / CPPC</td><td>Riesgo del vendedor / riesgo total del cliente (no usar).</td><td>T&amp;M: margen % constante, el cliente paga el sobrecosto.</td></tr>
-    <tr><td>TIER</td><td>Lo define la topología. III = mantenimiento concurrente.</td><td>La disponibilidad lograda no define el TIER.</td></tr>
-  </table></div>
-
-  <h3>PMBOK, procesos y salidas</h3>
-  <div class="tbl"><table>
-    <tr><th>Cap.</th><th>Procesos</th><th>Lo que se pregunta</th></tr>
-    <tr><td>5 Alcance</td><td>Planificar · Recopilar requisitos · Definir el alcance · Crear la EDT · Validar · Controlar</td><td>Línea base = enunciado + EDT + diccionario. Niveles de la EDT.</td></tr>
-    <tr><td>6 Cronograma</td><td>Planificar · Definir actividades · Secuenciar · Estimar duraciones · Desarrollar · Controlar</td><td>PDM, CPM, holguras, compresión, optimización de recursos.</td></tr>
-    <tr><td>7 Costos</td><td>Planificar · Estimar los costos · Determinar el presupuesto · Controlar los costos</td><td>Línea base de costos vs presupuesto; valor ganado (CV, SV, CPI, SPI, EAC).</td></tr>
-    <tr><td>8 Calidad</td><td>Planificar · Gestionar (QA) · Controlar (QC)</td><td>Calidad vs grado; COQ; prevención sobre inspección.</td></tr>
-    <tr><td>11 Riesgos</td><td>Planificar · Identificar · Cualitativo · Cuantitativo · Planificar respuesta · Implementar · Monitorear</td><td>Estrategias; EMV; árbol; reservas; registro vs informe.</td></tr>
-    <tr><td>12 Adquisiciones</td><td>Planificar · Efectuar · Controlar</td><td>Hacer o comprar; tipos de contrato; enunciado del trabajo; documentos de licitación.</td></tr>
-  </table></div>
-</section>
-
 <section id="ejercicios">
-  <h2>16 ejercicios tipo Sección II</h2>
-  <p class="sub">Los ejercicios 2 a 7 son los temas con más trampas. Resuelve en papel antes de abrir el desarrollo y escribe siempre la conclusión.</p>
+  <h2>22 ejercicios tipo Sección II</h2>
+    <h3 class="exh">Seis ejercicios nuevos, armados con el comunicado</h3>
+  <p class="sub">Primero éstos. Resuelve en papel antes de abrir el desarrollo y escribe la conclusión.</p>
 
-  <div class="ex"><div class="tag">Ej. 1 · Arquitectura </div><h3>Disponibilidad con tres niveles redundantes</h3>
+  <div class="ex"><div class="tag">Ej. A · Estimación · 3 desarrollos en uno</div><h3>UCP completo, sensibilidad y viabilidad</h3>
+    <p><b>Caso PortalSalud.</b> Actores: 4 sistemas por API, 2 sistemas por protocolo de texto y 5 roles de usuario con interfaz gráfica. Casos de uso (transacciones): 2, 3, 3, 1, 4, 5, 6, 7, 5, 4, 8, 10, 12, 9.</p>
+    <p>T1–T13 (peso): 4 (2), 3 (1), 4 (1), 4 (1), 1 (1), 4 (0,5), 4 (0,5), 3 (2), 3 (1), 4 (1), 5 (1), 4 (1), 3 (1). E1–E8 (peso): 3 (1,5), 2 (0,5), 4 (1), 3 (0,5), 4 (1), 2 (2), 2 (−1), 3 (−1).</p>
+    <p>La empresa tiene 6 ingenieros a 160 h/mes. Plazo máximo 9 meses, presupuesto $235.000.000, tarifa $26.000 por hora.</p>
+    <p>a) Esfuerzo total. b) ¿Es viable en plazo, dotación y presupuesto? c) Qué pasa con el esfuerzo, uno a la vez, si: (1) la motivación E5 baja de 4 a 2; (2) la estabilidad E6 baja de 2 a 1; (3) se agregan dos casos de uso medios; (4) T1 sube de 4 a 5 y T8 de 3 a 5. ¿Cuál mueve más y por qué?</p>
+    <details><summary>Ver desarrollo</summary><div class="sol">
+<div class="f">UAW  = 4×1 + 2×2 + 5×3 = 4 + 4 + 15 = 23
+UUCW = 4 simples×5 + 6 medios×10 + 4 complejos×15 = 20 + 60 + 60 = 140     UUCP = 163
+ΣT = 8+3+4+4+1+2+2+6+3+4+5+4+3 = 49,00 → TCF = 0,6 + 0,49 = 1,09
+ΣE = 4,5+1+4+1,5+4+4−2−3 = 14,00 → EF = 1,4 − 0,42 = 0,98
+UCP = 163 × 1,09 × 0,98 = 174,12
+Desfavorables: E2 = 2 y E6 = 2 (E1 = 3 y E4 = 3 no cuentan; E7 = 2 y E8 = 3 no son &gt; 3) = 2 → CF = 20
+E prog = 174,12 × 20 = 3.482,40 → E total = ÷ 0,40 = 8.706 HH</div>
+<div class="f">Plazo     = 8.706 ÷ (6 × 160) = 9,07 meses &gt; 9 → NO cumple con 6
+Dotación  = 8.706 ÷ (9 × 160) = 6,05 → 7 ingenieros (tiene 6: falta 1)
+Costo     = 8.706 × 26.000 = $ 226.356.000 ≤ $ 235.000.000 → cumple, holgura $ 8.644.000 (3,68 %)</div>
+<div class="f">Escenario                         ΣE / ΣT / UUCP     CF    E total     Variación
+(1) E5 4 → 2                      ΣE 12 → EF 1,04    28    12.935 HH   +48,58 %
+    desfavorables: E2, E5, E6 = 3 → el CF salta a 28 · UCP 184,78 × 28 = 5.173,84 ÷ 0,40
+(2) E6 2 → 1                      ΣE 12 → EF 1,04    20     9.239 HH    +6,12 %
+    E6 ya era desfavorable: sólo cambia el EF · UCP 184,78 × 20 = 3.695,60 ÷ 0,40
+(3) + 2 casos medios              UUCP 183           20     9.774 HH   +12,27 %
+    UCP 183 × 1,09 × 0,98 = 195,48 × 20 = 3.909,60 ÷ 0,40
+(4) T1 4→5 y T8 3→5               ΣT 55 → TCF 1,15   20     9.185 HH    +5,50 %
+    UCP 163 × 1,15 × 0,98 = 183,70 × 20 = 3.674,00 ÷ 0,40</div>
+      <p><span class="ans">8.706 HH · no viable en plazo con 6 (necesita 7) · sí en presupuesto</span></p>
+      <p>Los escenarios (1) y (2) bajan ΣE en los mismos 2 puntos, pero (1) mueve casi ocho veces más: E5 cruza el umbral de 3, la cuenta de desfavorables llega a 3 y el CF sube de 20 a 28. Con eso el proyecto deja de ser viable también en presupuesto ($336.310.000, un 43,11 % sobre el máximo) y necesitaría 9 ingenieros. El alcance (3) es el segundo parámetro; el ajuste técnico (4), con dos factores de peso 2 subiendo tres puntos en total, apenas mueve un 5,50 %. <span class="trap">Trampa:</span> agregar el séptimo ingeniero arregla el plazo, pero no cambia el costo: las horas son las mismas.</p>
+    </div></details></div>
+
+  <div class="ex"><div class="tag">Ej. B · Planificación · dibujar a mano</div><h3>Red con FS, SS, FF, adelanto y retraso</h3>
+    <div class="tbl"><table>
+      <tr><th>Act.</th><th>Descripción</th><th>Sem.</th><th>Predecesora y relación</th></tr>
+      <tr><td>A</td><td>Levantamiento</td><td class="n">4</td><td>—</td></tr>
+      <tr><td>B</td><td>Diseño</td><td class="n">5</td><td>A · FS</td></tr>
+      <tr><td>C</td><td>Preparar ambientes</td><td class="n">3</td><td>A · SS + 2 (empieza 2 semanas después de que empieza A)</td></tr>
+      <tr><td>D</td><td>Construcción</td><td class="n">8</td><td>B · FS − 1 (adelanto de 1 semana)</td></tr>
+      <tr><td>E</td><td>Integración con el banco</td><td class="n">4</td><td>C · FS + 3 (retraso: el banco tarda 3 semanas en habilitar)</td></tr>
+      <tr><td>F</td><td>Pruebas</td><td class="n">4</td><td>D · FS y E · FS</td></tr>
+      <tr><td>G</td><td>Manual de usuario</td><td class="n">3</td><td>D · FF + 1 (termina 1 semana después de que termina D)</td></tr>
+      <tr><td>H</td><td>Puesta en marcha</td><td class="n">2</td><td>F · FS y G · FS</td></tr>
+    </table></div>
+    <p>a) Dibuja la red y la carta Gantt. b) Duración, ruta crítica, holgura total y libre de C, E y G. c) ¿Qué pasa si C termina 2 semanas tarde? ¿Y si termina 5 semanas tarde? ¿Y si E termina 3 semanas tarde?</p>
+    <details><summary>Ver desarrollo</summary><div class="sol">
+<div class="f">Adelante:
+A 0 → 4 · B 4 → 9 · C IT = IT(A) + 2 = 2 → 5
+D IT = FT(B) − 1 = 8 → 16 · E IT = FT(C) + 3 = 8 → 12
+F IT = máx(16; 12) = 16 → 20 · G FT = FT(D) + 1 = 17 → IT = 17 − 3 = 14 → 14 → 17
+H IT = máx(20; 17) = 20 → 22 → duración 22 semanas
+Atrás:
+H 20 → 22 · F 16 → 20 · G FTa = ITa(H) = 20 → 17 → 20
+D FTa = mín(ITa F = 16; FTa G − 1 = 19) = 16 → 8 → 16
+E FTa = 16 → 12 → 16 · B FTa = ITa(D) + 1 = 9 → 4 → 9
+C FTa = ITa(E) − 3 = 9 → 6 → 9 · A FTa = mín(ITa B = 4; ITa C − 2 + 4 = 8) = 4
+HT: C = 4, E = 4, G = 3, resto 0 → ruta crítica A-B-D-F-H = 4 + 5 − 1 + 8 + 4 + 2 = 22
+HL: C = IT(E) − 3 − FT(C) = 8 − 3 − 5 = 0 · E = 16 − 12 = 4 · G = 20 − 17 = 3</div>
+<div class="netbox"><svg class="net" viewBox="0 0 850 345" role="img" aria-label="Diagrama de red del ejercicio B: ruta crítica A, B, D, F, H de 22 semanas"><defs><marker id="ar" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path d="M0 0L8 4L0 8z" class="mk"/></marker><marker id="arc" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path d="M0 0L8 4L0 8z" class="mkc"/></marker></defs><path class="e ec" d="M150 170H170V82H186" marker-end="url(#arc)"/><path class="e ed" d="M150 190H170V278H186" marker-end="url(#ar)"/><text class="lb" x="138" y="240">SS +2</text><path class="e ec ed" d="M320 82H356" marker-end="url(#arc)"/><text class="lb" x="338" y="74">FS −1</text><path class="e ed" d="M320 278H356" marker-end="url(#ar)"/><text class="lb" x="338" y="270">FS +3</text><path class="e ed" d="M490 76H510V66H526" marker-end="url(#ar)"/><text class="lb" x="508" y="56">FF +1</text><path class="e ec" d="M490 96H505V192H526" marker-end="url(#arc)"/><path class="e" d="M490 278H515V202H526" marker-end="url(#ar)"/><path class="e" d="M660 66H680V122H696" marker-end="url(#ar)"/><path class="e ec" d="M660 192H680V142H696" marker-end="url(#arc)"/><g class="cr"><rect x="20" y="138" width="130" height="84" rx="4"/><path d="M20 164H150M20 196H150M63 138V164M107 138V164M63 196V222M107 196V222"/><text x="41.5" y="156">0</text><text x="85" y="156">4</text><text x="128.5" y="156">4</text><text class="nm" x="85" y="185">A</text><text x="41.5" y="214">0</text><text class="h" x="85" y="214">H 0</text><text x="128.5" y="214">4</text></g><g class="cr"><rect x="190" y="40" width="130" height="84" rx="4"/><path d="M190 66H320M190 98H320M233 40V66M277 40V66M233 98V124M277 98V124"/><text x="211.5" y="58">4</text><text x="255" y="58">5</text><text x="298.5" y="58">9</text><text class="nm" x="255" y="87">B</text><text x="211.5" y="116">4</text><text class="h" x="255" y="116">H 0</text><text x="298.5" y="116">9</text></g><g class="nc"><rect x="190" y="236" width="130" height="84" rx="4"/><path d="M190 262H320M190 294H320M233 236V262M277 236V262M233 294V320M277 294V320"/><text x="211.5" y="254">2</text><text x="255" y="254">3</text><text x="298.5" y="254">5</text><text class="nm" x="255" y="283">C</text><text x="211.5" y="312">6</text><text class="h" x="255" y="312">H 4</text><text x="298.5" y="312">9</text></g><g class="cr"><rect x="360" y="40" width="130" height="84" rx="4"/><path d="M360 66H490M360 98H490M403 40V66M447 40V66M403 98V124M447 98V124"/><text x="381.5" y="58">8</text><text x="425" y="58">8</text><text x="468.5" y="58">16</text><text class="nm" x="425" y="87">D</text><text x="381.5" y="116">8</text><text class="h" x="425" y="116">H 0</text><text x="468.5" y="116">16</text></g><g class="nc"><rect x="360" y="236" width="130" height="84" rx="4"/><path d="M360 262H490M360 294H490M403 236V262M447 236V262M403 294V320M447 294V320"/><text x="381.5" y="254">8</text><text x="425" y="254">4</text><text x="468.5" y="254">12</text><text class="nm" x="425" y="283">E</text><text x="381.5" y="312">12</text><text class="h" x="425" y="312">H 4</text><text x="468.5" y="312">16</text></g><g class="nc"><rect x="530" y="24" width="130" height="84" rx="4"/><path d="M530 50H660M530 82H660M573 24V50M617 24V50M573 82V108M617 82V108"/><text x="551.5" y="42">14</text><text x="595" y="42">3</text><text x="638.5" y="42">17</text><text class="nm" x="595" y="71">G</text><text x="551.5" y="100">17</text><text class="h" x="595" y="100">H 3</text><text x="638.5" y="100">20</text></g><g class="cr"><rect x="530" y="150" width="130" height="84" rx="4"/><path d="M530 176H660M530 208H660M573 150V176M617 150V176M573 208V234M617 208V234"/><text x="551.5" y="168">16</text><text x="595" y="168">4</text><text x="638.5" y="168">20</text><text class="nm" x="595" y="197">F</text><text x="551.5" y="226">16</text><text class="h" x="595" y="226">H 0</text><text x="638.5" y="226">20</text></g><g class="cr"><rect x="700" y="90" width="130" height="84" rx="4"/><path d="M700 116H830M700 148H830M743 90V116M787 90V116M743 148V174M787 148V174"/><text x="721.5" y="108">20</text><text x="765" y="108">2</text><text x="808.5" y="108">22</text><text class="nm" x="765" y="137">H</text><text x="721.5" y="166">20</text><text class="h" x="765" y="166">H 0</text><text x="808.5" y="166">22</text></g></svg></div>
+<div class="gantt" role="img" aria-label="Carta Gantt del ejercicio B, 22 semanas; en color la ruta crítica A, B, D, F, H"><span class="gl"></span><span class="gw">0</span><span class="gw"></span><span class="gw">2</span><span class="gw"></span><span class="gw">4</span><span class="gw"></span><span class="gw">6</span><span class="gw"></span><span class="gw">8</span><span class="gw"></span><span class="gw">10</span><span class="gw"></span><span class="gw">12</span><span class="gw"></span><span class="gw">14</span><span class="gw"></span><span class="gw">16</span><span class="gw"></span><span class="gw">18</span><span class="gw"></span><span class="gw">20</span><span class="gw"></span><span class="gl">A</span><span class="gtrack"><i class="gb gc" style="grid-column:1/5"></i></span><span class="gl">B</span><span class="gtrack"><i class="gb gc" style="grid-column:5/10"></i></span><span class="gl">C</span><span class="gtrack"><i class="gb" style="grid-column:3/6"></i><i class="gs" style="grid-column:6/10"></i></span><span class="gl">D</span><span class="gtrack"><i class="gb gc" style="grid-column:9/17"></i></span><span class="gl">E</span><span class="gtrack"><i class="gb" style="grid-column:9/13"></i><i class="gs" style="grid-column:13/17"></i></span><span class="gl">F</span><span class="gtrack"><i class="gb gc" style="grid-column:17/21"></i></span><span class="gl">G</span><span class="gtrack"><i class="gb" style="grid-column:15/18"></i><i class="gs" style="grid-column:18/21"></i></span><span class="gl">H</span><span class="gtrack"><i class="gb gc" style="grid-column:21/23"></i></span></div>
+<p class="gkey">Barras en color: ruta crítica. Gris: no críticas. Punteado: holgura total (la de C y E es la misma, compartida).</p>
+<div class="f">C termina 2 tarde (≤ HT 4, &gt; HL 0): E se corre a 10 → 14, F sigue en 16 → el proyecto termina en 22
+C termina 5 tarde (&gt; HT 4): E 13 → 17, F 17 → 21, H 21 → 23 → el proyecto se atrasa 5 − 4 = 1 semana
+     Nueva ruta crítica A-C-E-F-H; B y D quedan con 1 semana de holgura
+E termina 3 tarde (≤ HL 4): no se mueve nada</div>
+      <p><span class="ans">22 semanas · A-B-D-F-H · C: HT 4, HL 0 · E: HT 4, HL 4 · G: HT 3, HL 3</span></p>
+      <p>Las 4 semanas de C y E son una holgura compartida: si C gasta 2, a E le quedan 2. G, con FF, no se programa desde su inicio: se ancla en el fin de D más 1 y se retrocede su duración. El retraso de 3 semanas entre C y E es espera del banco: no consume horas, pero ocupa calendario (y es dependencia externa, va al registro de riesgos). Para ganar una semana sin costo se podría aumentar el adelanto entre B y D (fast tracking), si esa dependencia es discrecional, con más riesgo de retrabajo.</p>
+    </div></details></div>
+
+  <div class="ex"><div class="tag">Ej. C · Sala · desarrollo</div><h3>De los equipos al generador, y el TIER</h3>
+    <p>24 servidores de 2U, 4 almacenamientos de 4U, 6 equipos de red de 1U y 10U de infraestructura (patch panels, PDU). Racks de 42U con ocupación máxima del 70 %. 3,5 m² por rack más 20 % de reserva. Densidad 7 kW por rack; UPS con 25 % de margen; PUE 1,6; generador 30 % sobre la potencia de sitio. a) Racks y superficie. b) Carga TI, UPS, sitio, generador y calor en BTU/h. c) El grupo declara la sala «equivalente a TIER III» con UPS N+1 y un único camino de distribución. ¿Es correcto?</p>
+    <details><summary>Ver desarrollo</summary><div class="sol">
+<div class="f">U = 24×2 + 4×4 + 6×1 + 10 = 48 + 16 + 6 + 10 = 80 U
+Útiles por rack = 42 × 0,70 = 29,40 U → 80 ÷ 29,40 = 2,72 → 3 racks   (verificación: 80 ÷ 126 = 63,49 % ≤ 70 %)
+Superficie = 3 × 3,5 × 1,20 = 12,60 m²
+Carga TI = 3 × 7 = 21,00 kW → UPS = 21 × 1,25 = 26,25 kW
+Sitio = 21 × 1,6 = 33,60 kW → Generador = 33,60 × 1,30 = 43,68 kW
+Calor = 21,00 kW × 3.412 = 71.652 BTU/h (≈ 6 equipos de 12.000 BTU/h; un aire de confort no sirve)</div>
+      <p><span class="ans">3 racks · 12,60 m² · 21 · 26,25 · 33,60 · 43,68 kW · 71.652 BTU/h</span></p>
+      <p>c) No. TIER III exige <b>mantenimiento concurrente</b>, y eso supone dos caminos de distribución (uno activo y uno alternativo). Con un solo camino, mantener el tablero o el camino apaga la sala: la topología es de TIER II aunque el UPS sea N+1. El TIER lo define la topología, no la disponibilidad que se espera lograr. Densidad: 7 kW/rack está dentro de lo que el aire enfría (≈ 20 kW).</p>
+    </div></details></div>
+
+  <div class="ex"><div class="tag">Ej. D · Calidad · desarrollo</div><h3>Costo de la calidad y el óptimo</h3>
+    <p>Proyecto de costo directo $180 M. Partidas de calidad: capacitación en el estándar de código $4 M; revisiones de diseño $3 M; automatización de pruebas $5 M; pruebas de sistema $9 M; auditoría de calidad $2 M; retrabajo de módulos rechazados por QA $11 M; repetición de pruebas $3 M; multas por incumplir el SLA en producción $8 M; soporte no presupuestado tras la entrega $6 M. a) Clasifica y calcula el costo de la calidad y su peso. b) Invertir $6 M más en prevención bajaría las fallas internas 40 % y las externas 50 %. ¿Conviene? c) Unos segundos $6 M sólo las bajarían otro 10 % cada una. ¿Conviene?</p>
+    <details><summary>Ver desarrollo</summary><div class="sol">
+<div class="f">Prevención      = 4 + 3 + 5 = 12 M      ┐ conformidad 23 M
+Evaluación      = 9 + 2     = 11 M      ┘
+Fallas internas = 11 + 3    = 14 M      ┐ no conformidad 28 M
+Fallas externas = 8 + 6     = 14 M      ┘
+COQ = 51 M → 51 ÷ 180 = 28,33 % del costo directo
+b) 18 + 11 + 14 × 0,60 + 14 × 0,50 = 18 + 11 + 8,40 + 7,00 = 44,40 M → baja 6,60 M → conviene
+c) 24 + 11 + 8,40 × 0,90 + 7,00 × 0,90 = 24 + 11 + 7,56 + 6,30 = 48,86 M &gt; 44,40 → no conviene</div>
+      <p><span class="ans">COQ $51 M (28,33 %) · la primera inversión conviene, la segunda no</span> Es la idea del costo óptimo: invertir en prevención y evaluación conviene hasta el punto en que cada peso extra deja de evitar al menos un peso de fallas. Más allá es sobreinversión. Fallas internas = las ve el equipo antes de entregar; externas = las ve el cliente.</p>
+    </div></details></div>
+
+  <div class="ex"><div class="tag">Ej. E · Riesgos · alternativas</div><h3>Zonas y cuánto conviene gastar</h3>
+    <p>Escala de 0 a 1. R1: P 0,7 · I 0,6. R2: P 0,5 · I 0,5. R3: P 0,3 · I 0,4. R4: P 0,1 · I 0,5. a) Zona y regla de acción de cada uno. b) R2 tiene un impacto de $16 M. Opciones: prueba de concepto de $2 M que baja P a 20 %; seguro con prima de $6 M y deducible de $2 M; consulta formal en el foro, gratis, que baja P a 40 %. ¿Qué conviene?</p>
+    <details><summary>Ver desarrollo</summary><div class="sol">
+<div class="f">R1 = 0,42 → crítica (≥ 0,40): evitar, cambiando alcance o diseño, o no ofertar
+R2 = 0,25 → alta: mitigar con acción costeada en la EDT
+R3 = 0,12 → media: aceptar activamente, con reserva y disparador
+R4 = 0,05 → baja: aceptar pasivamente, sólo observar
+VE de R2 = 0,50 × 16 = 8,00 M
+Prueba de concepto: VE 0,20 × 16 = 3,20 → ahorro 4,80 − costo 2 = +2,80 M · retorno 2,40
+Seguro: VE residual 0,50 × 2 = 1,00 → ahorro 7,00 − prima 6 = +1,00 M · retorno 1,17
+Consulta: VE 0,40 × 16 = 6,40 → ahorro 1,60 a costo 0 → retorno infinito</div>
+      <p><span class="ans">Primero la consulta (gratis), después la prueba de concepto; el seguro conviene menos</span> Una respuesta se justifica si el ahorro esperado supera su costo, y se hace en la etapa más temprana posible. El deducible del seguro es el riesgo residual.</p>
+    </div></details></div>
+
+  <div class="ex"><div class="tag">Ej. F · Estimación · punto de función</div><h3>Clasificar y contar</h3>
+    <p>(1) Registrar paciente, que mantiene el archivo de pacientes: media. (2) Modificar datos del paciente: baja. (3) Emitir certificado con folio calculado: media. (4) Consultar el historial de atenciones tal como está guardado: baja. (5) Reporte mensual con totales y promedios: alta. (6) Archivo de pacientes, mantenido por el sistema: media. (7) Archivo de atenciones, mantenido por el sistema: baja. (8) Padrón de previsión que mantiene FONASA y el sistema sólo consulta: baja. ΣFi = 42.</p>
+    <details><summary>Ver desarrollo</summary><div class="sol">
+<div class="f">(1) EI media 4 · (2) EI baja 3 · (3) EO media 5 · (4) EQ baja 3 · (5) EO alta 7
+(6) ILF media 10 · (7) ILF baja 7 · (8) EIF baja 5
+UFP = 4 + 3 + 5 + 3 + 7 + 10 + 7 + 5 = 44
+TCF = 0,65 + 0,42 = 1,07 → FP = 44 × 1,07 = 47,08</div>
+      <p><span class="ans">47,08 PF</span> <span class="trap">Trampas:</span> (3) y (5) son EO porque el dato sale calculado; (4) es EQ porque sale tal como está guardado. (8) es EIF porque lo mantiene otro sistema.</p>
+    </div></details></div>
+
+  <h3 class="exh">Los 16 ejercicios base</h3>
+
+
+  <div class="ex"><div class="tag">Ej. 1 · Arquitectura · mantención</div><h3>Disponibilidad con tres niveles redundantes</h3>
     <p>WAF 99,99 %; par de balanceadores activo-activo (99,90 % cada uno); tres servidores de aplicación activo-activo (99,00 % cada uno; basta uno en línea); par de bases de datos con conmutación (99,50 % cada una). Se exige 99,95 % mensual sobre 30 días. ¿Cumple? ¿Y sin redundancia?</p>
     <details><summary>Ver desarrollo</summary><div class="sol">
 <div class="f">Balanceadores: 1 − (0,001)² = 0,999999
@@ -583,7 +825,7 @@ Sin redundancia: 0,9999 × 0,999 × 0,99 × 0,995 = 0,98396654 → 98,40 % · 69
       <p><span class="ans">Cumple: 99,99 % y 5,49 min frente a 21,60</span> Ahora el eslabón más débil es el WAF, que quedó sin par.</p>
     </div></details></div>
 
-  <div class="ex"><div class="tag">Ej. 2 · Estimación · con trampas</div><h3>UCP completo y viabilidad</h3>
+  <div class="ex"><div class="tag">Ej. 2 · Estimación · punto débil</div><h3>UCP completo y viabilidad</h3>
     <p>Actores: 3 sistemas por API, 2 sistemas por protocolo de texto, 8 tipos de usuario con GUI. Casos de uso (transacciones): 2, 3, 3, 1, 4, 6, 5, 7, 4, 6, 9, 12, 8, 15, 10. T1–T13: 4, 3, 3, 4, 3, 2, 2, 3, 3, 4, 5, 3, 3. E1–E8: 2, 4, 4, 2, 3, 2, 4, 3. Equipo de 8 ingenieros a 160 h/mes; plazo máximo 11 meses; presupuesto $350.000.000; tarifa $24.000/h. ¿Es viable?</p>
     <details><summary>Ver desarrollo</summary><div class="sol">
 <div class="f">UAW  = 3×1 + 2×2 + 8×3 = 31
@@ -596,10 +838,10 @@ E prog = 218,92 × 28 = 6.129,76 → E total = ÷ 0,40 = 15.324 HH
 Plazo = 15.324 ÷ (8 × 160) = 11,97 meses &gt; 11 → NO cumple
 Personas para 11 meses = 15.324 ÷ (11 × 160) = 8,71 → 9 ingenieros
 Costo = 15.324 × 24.000 = $ 367.776.000 &gt; $ 350.000.000 → excede en $ 17.776.000 (5,08 %)</div>
-      <p><span class="ans">No es viable: no cumple plazo ni presupuesto</span> Un noveno ingeniero arregla el plazo, pero no el presupuesto, porque las horas totales son las mismas. Salidas: recortar alcance o renegociar en la ventana de consultas. <span class="trap">Trampa:</span> no contar E7 = 4 como desfavorable da CF 20 y 10.946 HH, que pasaría las dos restricciones.</p>
+      <p><span class="ans">No es viable: no cumple plazo ni presupuesto</span> Un noveno ingeniero arregla el plazo, pero no el presupuesto, porque las horas totales son las mismas. Salidas: recortar alcance o renegociar en la ventana de consultas. <span class="trap">Trampa:</span> no contar E7 = 4 como desfavorable da CF 20 y 10.946 HH, que pasaría las dos restricciones. <b>Ojo:</b> aquí hay 4 desfavorables; con la regla del enunciado del Control 2 (más de 3 → replantear) la respuesta sería «no se estima: el proyecto debe replantearse». Lee siempre la regla del enunciado.</p>
     </div></details></div>
 
-  <div class="ex"><div class="tag">Ej. 3 · Estimación · con trampas</div><h3>Viabilidad corta</h3>
+  <div class="ex"><div class="tag">Ej. 3 · Estimación · punto débil</div><h3>Viabilidad corta</h3>
     <p>Esfuerzo total 9.800 HH; 5 ingenieros a 160 h/mes; plazo máximo 12 meses; presupuesto $260.000.000; tarifa $25.000/h.</p>
     <details><summary>Ver desarrollo</summary><div class="sol">
 <div class="f">Plazo = 9.800 ÷ (5 × 160) = 12,25 meses &gt; 12 → no cumple (faltan 9.800 − 9.600 = 200 HH)
@@ -608,7 +850,7 @@ Costo = 9.800 × 25.000 = $ 245.000.000 ≤ $ 260.000.000 → holgura $ 15.000.0
       <p><span class="ans">Cumple presupuesto, no plazo: se necesita un sexto ingeniero</span> El sexto no cambia el costo (son las mismas 9.800 horas).</p>
     </div></details></div>
 
-  <div class="ex"><div class="tag">Ej. 4 · Riesgo · con trampas</div><h3>Árbol de decisión y punto de indiferencia</h3>
+  <div class="ex"><div class="tag">Ej. 4 · Riesgo · punto débil</div><h3>Árbol de decisión y punto de indiferencia</h3>
     <p>A: plataforma propia, costo $80 M, con 30 % de probabilidad de rehacer la integración por $50 M. B: SaaS, costo $90 M, con 10 % de pagar $20 M de adaptación. ¿Qué conviene, por cuánto, y en qué probabilidad da lo mismo?</p>
     <details><summary>Ver desarrollo</summary><div class="sol">
 <div class="f">EMV(A) = 80 + 0,30 × 50 = 95 M
@@ -618,7 +860,7 @@ Presupuesto de B = 90 M de costo + 2 M de reserva de contingencia</div>
       <p><span class="ans">B, por $3 M; indiferencia en 24,00 %</span> Bajo 24 % conviene A. Con 30 % estimado el margen es de sólo 6 puntos: la decisión es frágil y conviene una consulta que baje esa probabilidad. Escribe siempre el EMV de cada rama, la diferencia, la p y la interpretación.</p>
     </div></details></div>
 
-  <div class="ex"><div class="tag">Ej. 5 · Sala · con trampas</div><h3>Racks, superficie y eléctrico</h3>
+  <div class="ex"><div class="tag">Ej. 5 · Sala · punto débil</div><h3>Racks, superficie y eléctrico</h3>
     <p>38 servidores de 2U, 6 almacenamientos de 4U y 10 equipos de red de 1U. Racks de 42U con ocupación máxima del 70 %. 3,5 m² por rack más 25 % de reserva. 6 kW por rack; UPS con 30 % de margen; PUE 1,5; generador con 25 % sobre la potencia de sitio.</p>
     <details><summary>Ver desarrollo</summary><div class="sol">
 <div class="f">U = 38×2 + 6×4 + 10×1 = 76 + 24 + 10 = 110 U
@@ -650,7 +892,7 @@ N+1 → 6 instancias</div>
       <p><span class="ans">6 instancias</span> Declara cada supuesto (8 %, 3 op/min) con su origen.</p>
     </div></details></div>
 
-  <div class="ex"><div class="tag">Ej. 8 · Cronograma </div><h3>Ruta crítica y holgura compartida</h3>
+  <div class="ex"><div class="tag">Ej. 8 · Cronograma · mantención</div><h3>Ruta crítica y holgura compartida</h3>
     <p>FS sin retrasos. A 3 (—) · B 4 (A) · C 2 (A) · D 5 (B) · E 3 (C) · F 2 (E) · G 3 (D, F). Duración, ruta crítica y holguras total y libre de C, E y F.</p>
     <details><summary>Ver desarrollo</summary><div class="sol">
 <div class="f">Adelante: A 0-3 · B 3-7 · C 3-5 · D 7-12 · E 5-8 · F 8-10 · G máx(12;10)=12-15 → 15 días
@@ -660,7 +902,7 @@ HL: C = IT(E) − FT(C) = 5 − 5 = 0 · E = 8 − 8 = 0 · F = 12 − 10 = 2</d
       <p><span class="ans">15 días · A-B-D-G · HT 2 en C, E, F · HL sólo F = 2</span> Los 2 días son de toda la cadena C-E-F y se usan una sola vez.</p>
     </div></details></div>
 
-  <div class="ex"><div class="tag">Ej. 9 · Cronograma </div><h3>Compresión con actividad no crítica</h3>
+  <div class="ex"><div class="tag">Ej. 9 · Cronograma · mantención</div><h3>Compresión con actividad no crítica</h3>
     <p>La oferta da 19 semanas con una sola ruta crítica; el plazo es 16 y la multa $2.800.000 por semana o fracción. Compresión: P (crítica) 1 sem a $1,5 M; Q (crítica) 2 sem a $2,6 M c/u; R (crítica) 1 sem a $3,2 M; S (no crítica) 1 sem a $0,5 M. Ninguna otra ruta se vuelve crítica.</p>
     <details><summary>Ver desarrollo</summary><div class="sol">
 <div class="f">Hay que acortar 19 − 16 = 3 semanas. S no sirve: no es crítica.
@@ -669,7 +911,7 @@ Multa por no comprimir = 3 × 2,8 = 8,4 M → conviene comprimir, ahorro 1,7 M</
       <p><span class="ans">$6.700.000 comprimiendo P y Q; conviene</span></p>
     </div></details></div>
 
-  <div class="ex"><div class="tag">Ej. 10 · Riesgo </div><h3>Reserva, línea base y presupuesto</h3>
+  <div class="ex"><div class="tag">Ej. 10 · Riesgo · mantención</div><h3>Reserva, línea base y presupuesto</h3>
     <p>Costos directos $300 M. Riesgos: 30 % × $20 M, 50 % × $8 M, 20 % × $15 M, 40 % × $5 M, 10 % × $30 M. Oportunidad: 25 % de ahorrar $8 M. Reserva de gestión: 5 % de la línea base.</p>
     <details><summary>Ver desarrollo</summary><div class="sol">
 <div class="f">Amenazas: 6 + 4 + 3 + 2 + 3 = 18 M · Oportunidad: −2 M → Σ EMV = 16 M (5,33 %)
@@ -731,36 +973,205 @@ EAC = 200 × 84/70 = 240 M · ETC = 240 − 84 = 156 M · VAC = 200 − 240 = �
 
 <section id="simulacro">
   <h2>Simulacro Sección I</h2>
-  <p class="sub">Preguntas con cinco alternativas, como el certamen. Filtra por bloque para estudiar o hazlo completo para medirte.</p>
+  <p class="sub">100 preguntas con cinco alternativas. <b>Modo certamen</b> arma una tanda de 23 con la proporción del profe: 6 de investigación (respondes 5), 5 de arquitectura, 4 de alcance y planificación, 3 de calidad, 2 de sala, 2 de riesgos y 1 de estimación. «Otra tanda» sortea preguntas nuevas.</p>
   <div class="filters" id="filters" role="group" aria-label="Filtrar por bloque">
-    <button type="button" data-f="all" aria-pressed="true">Todas</button>
+    <button type="button" data-f="cert" aria-pressed="true">Modo certamen</button>
+    <button type="button" data-f="all" aria-pressed="false">Todas</button>
+    <button type="button" data-f="Estimación" aria-pressed="false">Estimación</button>
+    <button type="button" data-f="Planificación" aria-pressed="false">Alcance y planificación</button>
+    <button type="button" data-f="Sala" aria-pressed="false">Sala</button>
+    <button type="button" data-f="Calidad" aria-pressed="false">Calidad</button>
+    <button type="button" data-f="Riesgos" aria-pressed="false">Riesgos</button>
     <button type="button" data-f="Arquitectura" aria-pressed="false">Arquitectura</button>
     <button type="button" data-f="Investigación" aria-pressed="false">Investigación</button>
-    <button type="button" data-f="Gestión" aria-pressed="false">Gestión</button>
+    <button type="button" data-f="Contratos" aria-pressed="false">Contratos y PMBOK 7</button>
   </div>
+  <div class="qtools" id="qtools"><button type="button" id="newRound">Otra tanda</button><span class="k" id="roundTxt"></span></div>
   <div id="quiz"></div>
-  <div class="score"><span id="scoreTxt">0 respondidas · 0 correctas</span><button type="button" id="resetQuiz">Reiniciar</button></div>
+  <div class="score"><span id="scoreTxt">0 respondidas · 0 correctas</span><button type="button" id="resetQuiz">Reiniciar esta vista</button></div>
+</section>
+
+<section id="formulas">
+  <h2>Fórmulas</h2>
+  <p class="sub">Dos decimales en resultados intermedios; horas-hombre y personas enteras, y personas siempre hacia arriba.</p>
+
+  <h3>Disponibilidad y servicio</h3>
+<div class="f">Serie: A1 × A2 × …            Par (basta uno): 1 − (1 − A)²     Tres nodos: 1 − (1 − A)³
+Mes de 30 días = 43.200 min      Caída = (1 − A) × 43.200
+Disponibilidad período = (A − B) ÷ A × 100    (A = horas comprometidas, B = horas caídas)
+Presupuesto de error = 100 % − SLO        SLI = eventos buenos ÷ eventos válidos
+Quórum = ⌊N ÷ 2⌋ + 1                       Fallas toleradas = N − quórum</div>
+
+  <h3>Dimensionamiento físico</h3>
+<div class="f">Cómputo: usuarios × % concurrencia × op/min ÷ 60 = op/s → op/s × (1 + holgura) ÷ capacidad por nodo → ↑ → +1 (N+1)
+Workers = máx(vCPU pedida ÷ vCPU útil, RAM pedida ÷ RAM útil) → ↑ → +1
+RAID útil: 1 → 50 % · 5 → (N−1)/N · 6 → (N−2)/N · 10 → 50 %    Factor de compra = bruto ÷ útil
+RAID 10 «disco = C/2»: 4 discos de C/2 + 1 de reserva → factor ×2,5
+Racks = U totales ÷ (42 × ocupación máx) → ↑         Superficie = racks × m²/rack × (1 + reserva)
+Carga TI = racks × kW/rack → UPS × (1+m) · Sitio = TI × PUE · Generador = Sitio × (1+m) · Calor = TI (× 3.412 BTU/h)
+PUE = energía total (medidor) ÷ energía TI (PDU)       DCiE = 1/PUE en %</div>
+
+  <h3>Estimación</h3>
+<div class="f">UCP: UAW (1·API, 2·texto, 3·persona) + UUCW (5·1–3, 10·4–7, 15·8+) = UUCP
+TCF = 0,6 + 0,01·ΣT     EF = 1,4 − 0,03·ΣE     UCP = UUCP × TCF × EF
+Desfavorables: E1–E6 &lt; 3 y E7–E8 &gt; 3 → 0–2: 20 h · 3–4: 28 h · 5+: replantear
+E programación = UCP × CF → E total = ÷ 0,40 → etapas 10/20/40/15/15
+Plazo = E ÷ (personas × h/mes)    Personas = E ÷ (meses × h/mes) ↑    Costo = E × tarifa
+Puntos de función: EI 3/4/6 · EO 4/5/7 · EQ 3/4/6 · ILF 7/10/15 · EIF 5/7/10    TCF = 0,65 + 0,01·ΣFi
+PERT: tE = (O + 4M + P) ÷ 6 · σ = (P − O) ÷ 6 · ofertar tE + 2σ · Triangular (O+M+P)/3
+Tarifa: h prod = h × 0,80 → costo/h → + GG → + margen    Cono: 0,25×–4× (idea) … 1× (entrega)
+Sensibilidad: variación = (nuevo − base) ÷ base · CF 20→28 = +40 % · E ∝ UUCP · 1 pto ΣE = 0,03 EF · 1 pto ΣT = 0,01 TCF
+Plazo = HH ÷ (N × h/mes) · Dotación = HH ÷ (meses × h/mes) ↑ · Costo = HH × tarifa (no depende de N)</div>
+
+  <h3>Cronograma y costos</h3>
+<div class="f">Adelante IT = máx FT preds · Atrás FTa = mín ITa sucs · HT = ITa − IT · HL = mín IT sucs − FT
+FS+k: IT_B = FT_A + k     SS+k: IT_B = IT_A + k     FF+k: FT_B = FT_A + k → IT_B = FT_B − d     (adelanto = k negativo)
+Atrás: FS → FTa_A = ITa_B − k · SS → ITa_A = ITa_B − k · FF → FTa_A = FTa_B − k
+Atraso ≤ HL: nada · HL &lt; atraso ≤ HT: se corren sucesoras · atraso &gt; HT: proyecto + (atraso − HT)
+Compresión: actividad crítica más barata, semana a semana, mientras cueste menos que la multa
+Valor ganado: CV = EV − AC · SV = EV − PV · CPI = EV/AC · SPI = EV/PV
+              EAC = BAC ÷ CPI = BAC × AC/EV · ETC = EAC − AC · VAC = BAC − EAC</div>
+
+  <h3>Riesgo y contratos</h3>
+<div class="f">EMV = P × I (oportunidad resta) · Reserva = Σ EMV · % = Σ EMV ÷ costos directos
+Línea base = paquetes + contingencia     Presupuesto = línea base + reserva de gestión
+Árbol: costo cierto + P × impacto, gana el menor · Indiferencia: igualar y despejar p
+FPIF: honorario = ganancia obj ± %vendedor × desviación · precio = costo + honorario (tope: techo)
+      PTA = costo obj + (techo − precio obj) ÷ %comprador
+TCO equilibrio: iA + aA·t = iB + aB·t → t = (iA − iB) ÷ (aB − aA)
+Exposición = P × I → crítica ≥ 0,40 · alta 0,20–0,40 · media 0,08–0,20 · baja &lt; 0,08
+Respuesta conviene si VE antes − VE después &gt; costo · retorno = ahorro ÷ costo</div>
+
+  <h3>Calidad y sala</h3>
+<div class="f">COQ = prevención + evaluación (conformidad) + fallas internas + fallas externas (no conformidad)
+Requisito = atributo + métrica + valor objetivo + condición + método de verificación
+Herramientas: Pareto → Ishikawa → causa raíz
+TIER I 99,671 % (28,8 h) · II 99,741 % (22,7 h) · III 99,982 % (1,6 h) · IV 99,995 % (0,4 h)</div>
+</section>
+
+<section id="pares">
+  <h2>Pares de conceptos de las otras unidades</h2>
+  <p class="sub">Marcadas con ★ las que aparecieron en los controles y más se confunden.</p>
+  <div class="tbl"><table>
+    <tr><th>Concepto</th><th>Qué es</th><th>No confundir con</th></tr>
+    <tr><td>★ Cuenta de control</td><td>Punto de control donde se integran alcance, presupuesto y cronograma; se compara con el valor ganado. Tiene paquetes de trabajo.</td><td>Paquete de planificación: bajo la cuenta de control, trabajo conocido sin actividades detalladas. Paquete de trabajo: nivel más bajo.</td></tr>
+    <tr><td>★ Controlar la calidad</td><td>El equipo verifica que el entregable esté correcto. Ocurre antes.</td><td>Validar el alcance: el cliente o patrocinador acepta. Ocurre después. Ambos de monitoreo y control.</td></tr>
+    <tr><td>★ Dependencia discrecional</td><td>Lógica blanda; la única que se reordena para acortar (fast tracking).</td><td>Obligatoria (no se toca). Externa/interna es otro eje: quién controla.</td></tr>
+    <tr><td>★ Horas nominales</td><td>Usarlas subestima el costo ≈20 % (el real es ≈25 % mayor).</td><td>Horas productivas = 75–85 % de las nominales.</td></tr>
+    <tr><td>★ Cono de la incertidumbre</td><td>0,25×–4× antes de los requisitos; el precio se firma en lo más ancho; por eso existe la contingencia.</td><td>El cono se cierra con el avance, no al firmar.</td></tr>
+    <tr><td>★ Ventana de consultas</td><td>Transacción crítica de la licitación: última instancia para mover las reglas, a costo cero.</td><td>Entregar la oferta o firmar: ahí las reglas ya no se mueven.</td></tr>
+    <tr><td>★ Registro de riesgos</td><td>Riesgos individuales con su ficha.</td><td>Informe de riesgos: riesgo general del proyecto y resumen.</td></tr>
+    <tr><td>★ PUE</td><td>Medidor de la compañía ÷ PDU. Siempre multiplica. 1,0 imposible.</td><td>DCiE = el inverso en %.</td></tr>
+    <tr><td>★ RFP</td><td>Falta la solución; pide metodología, equipo y entregables además del precio.</td><td>RFI (falta información de mercado), RFQ (precio de algo especificado), IFB (pliego cerrado, menor precio).</td></tr>
+    <tr><td>★ PTA en FPIF</td><td>Desde el PTA, cada peso de sobrecosto lo paga el vendedor: precio fijo cerrado.</td><td>CPIF: misma fórmula de honorario, sin techo.</td></tr>
+    <tr><td>Escalar un riesgo</td><td>Lo excede al jefe de proyecto; lo toma la organización y el equipo deja de monitorearlo.</td><td>Mitigar, evitar, transferir y aceptar lo dejan en el proyecto.</td></tr>
+    <tr><td>Residual / secundario</td><td>Lo que queda tras la respuesta / lo que la respuesta creó.</td><td>Disparador: la señal que anuncia que ocurre.</td></tr>
+    <tr><td>Contingencia</td><td>Identificados, dentro de la línea base, la usa el jefe de proyecto.</td><td>Gestión: desconocidos, fuera de la línea base, la libera la gerencia. Margen: utilidad.</td></tr>
+    <tr><td>Corrupción del alcance</td><td>La empuja el cliente.</td><td>Exceso de funcionalidad: la regala el equipo.</td></tr>
+    <tr><td>Crashing</td><td>Más recursos en críticas; sube el costo.</td><td>Fast tracking: en paralelo; sube el riesgo.</td></tr>
+    <tr><td>Nivelación</td><td>Por disponibilidad de recursos; alarga el proyecto.</td><td>Estabilización: dentro de la holgura; no mueve el fin.</td></tr>
+    <tr><td>Holgura total</td><td>No mueve el fin del proyecto.</td><td>Holgura libre: no mueve el inicio temprano de la sucesora.</td></tr>
+    <tr><td>Calidad</td><td>Cumplir los requisitos prometidos; baja calidad siempre es problema.</td><td>Grado: categoría de prestaciones; se negocia.</td></tr>
+    <tr><td>Gestionar la calidad (QA)</td><td>Mira el proceso; preventivo; auditorías.</td><td>Controlar la calidad (QC): mira el producto; detectivo; pruebas.</td></tr>
+    <tr><td>Costo óptimo de calidad</td><td>El mínimo del costo total de las cuatro categorías.</td><td>No es «máxima prevención».</td></tr>
+    <tr><td>FFP / CPPC</td><td>Riesgo del vendedor / riesgo total del cliente (no usar).</td><td>T&amp;M: margen % constante, el cliente paga el sobrecosto.</td></tr>
+    <tr><td>TIER</td><td>Lo define la topología. III = mantenimiento concurrente.</td><td>La disponibilidad lograda no define el TIER.</td></tr>
+  </table></div>
+
+  <h3>PMBOK, procesos y salidas</h3>
+  <div class="tbl"><table>
+    <tr><th>Cap.</th><th>Procesos</th><th>Lo que se pregunta</th></tr>
+    <tr><td>5 Alcance</td><td>Planificar · Recopilar requisitos · Definir el alcance · Crear la EDT · Validar · Controlar</td><td>Línea base = enunciado + EDT + diccionario. Niveles de la EDT.</td></tr>
+    <tr><td>6 Cronograma</td><td>Planificar · Definir actividades · Secuenciar · Estimar duraciones · Desarrollar · Controlar</td><td>PDM, CPM, holguras, compresión, optimización de recursos.</td></tr>
+    <tr><td>7 Costos</td><td>Planificar · Estimar los costos · Determinar el presupuesto · Controlar los costos</td><td>Línea base de costos vs presupuesto; valor ganado (CV, SV, CPI, SPI, EAC).</td></tr>
+    <tr><td>8 Calidad</td><td>Planificar · Gestionar (QA) · Controlar (QC)</td><td>Calidad vs grado; COQ; prevención sobre inspección.</td></tr>
+    <tr><td>11 Riesgos</td><td>Planificar · Identificar · Cualitativo · Cuantitativo · Planificar respuesta · Implementar · Monitorear</td><td>Estrategias; EMV; árbol; reservas; registro vs informe.</td></tr>
+    <tr><td>12 Adquisiciones</td><td>Planificar · Efectuar · Controlar</td><td>Hacer o comprar; tipos de contrato; enunciado del trabajo; documentos de licitación.</td></tr>
+  </table></div>
+</section>
+
+<section id="diag">
+  <h2>Qué preguntaron los controles</h2>
+  <p class="sub">Cada pregunta de los dos controles con lo que había que saber según la pauta. El profe dijo que el Control 2 es lo más parecido al certamen. En la Sección II, sin desarrollo no hay puntaje.</p>
+
+  <h3>Control 2 (el más parecido al certamen)</h3>
+  <div class="tbl"><table>
+    <tr><th>Preg.</th><th>Tema</th><th>Lo que había que saber</th></tr>
+    <tr><td>1</td><td>SLA, SLO, SLI</td><td>SLA: contrato con consecuencia económica. SLO: meta interna, más exigente. SLI: la medición.</td></tr>
+    <tr><td>2</td><td>Elasticidad</td><td>Horizontal + automática + en los dos sentidos. Requiere servicio sin estado.</td></tr>
+    <tr><td>3</td><td>Cuenta de control y paquete de planificación</td><td>La cuenta de control integra alcance, presupuesto y cronograma; el paquete de planificación va bajo ella.</td></tr>
+    <tr><td>4</td><td>Validar el alcance vs controlar la calidad</td><td>Primero controlar la calidad (equipo, corrección); después validar el alcance (cliente, aceptación). Ambos de monitoreo y control.</td></tr>
+    <tr><td>5</td><td>Estabilización de recursos</td><td>Mover dentro de la holgura sin cambiar la fecha de término ni la ruta crítica.</td></tr>
+    <tr><td>6</td><td>Granularidad en UCP</td><td>1 caso de 14 transacciones = 15; 4 casos de 4 = 40. Descomponer sube el tamaño: la granularidad se declara.</td></tr>
+    <tr><td>7</td><td>Cono de la incertidumbre</td><td>0,25× a 4× antes de los requisitos; el precio se firma en el punto más ancho.</td></tr>
+    <tr><td>8</td><td>Escalar un riesgo</td><td>Excede la autoridad del director; la organización lo asume y el equipo deja de monitorearlo.</td></tr>
+    <tr><td>9</td><td>Registro vs informe de riesgos</td><td>Registro = riesgos individuales; informe = riesgo general del proyecto.</td></tr>
+    <tr><td>10</td><td>TIER III sin caminos redundantes</td><td>TIER III exige mantenimiento concurrente, y eso supone caminos redundantes.</td></tr>
+    <tr><td>11</td><td>RAID no es respaldo</td><td>RAID da continuidad ante falla de disco; no protege del borrado ni la corrupción. Regla 3-2-1.</td></tr>
+    <tr><td>12</td><td>RFP</td><td>Lo que falta es la solución, y se evalúan metodología y equipo: RFP.</td></tr>
+    <tr><td>13</td><td>FPIF sobre el PTA</td><td>Sobre el PTA el vendedor absorbe todo: se comporta como precio fijo cerrado.</td></tr>
+    <tr><td>14</td><td>Costo de la calidad</td><td>Prevención, evaluación, fallas internas, fallas externas. El óptimo es un equilibrio, no máxima prevención.</td></tr>
+    <tr><td>15</td><td>Gestionar vs controlar la calidad</td><td>Auditor del proceso = gestionar la calidad; pruebas del entregable = controlar la calidad.</td></tr>
+    <tr><td>16</td><td>Disponibilidad con par redundante</td><td>Par 1 − (1 − 0,99)² = 99,99 %; serie 99,84 %; 69,09 min frente a 43,20: no cumple.</td></tr>
+    <tr><td>17</td><td>Árbol de decisión y punto de indiferencia</td><td>Costo cierto + P × impacto por rama; igualar y despejar p.</td></tr>
+    <tr><td>18</td><td>Ruta crítica, holgura total y libre</td><td>16 días, A-B-D-G; C con holgura total 2 y libre 0 (la holgura es de toda la cadena).</td></tr>
+    <tr><td>19</td><td>Compresión vs multa</td><td>Sólo sirven actividades críticas; P + Q = $6,5 M &lt; multa $7 M: conviene comprimir.</td></tr>
+    <tr><td>20</td><td>Racks y superficie</td><td>42U × ocupación; racks hacia arriba; m² × racks × (1 + reserva).</td></tr>
+    <tr><td>21</td><td>UCP esfuerzo total</td><td>12.100 HH: UCP 242 × 20 = 4.840 de programación ÷ 0,40.</td></tr>
+    <tr><td>22</td><td>Viabilidad de plazo y presupuesto</td><td>Evaluar las dos restricciones, dotación hacia arriba, conclusión escrita.</td></tr>
+  </table></div>
+
+  <h3>Control 1</h3>
+  <div class="tbl"><table>
+    <tr><th>Preg.</th><th>Tema</th><th>Lo que había que saber</th></tr>
+    <tr><td>1</td><td>ISO/IEC 25010:2023</td><td>Nueve características; capacidad de interacción (ex usabilidad), flexibilidad (ex portabilidad), seguridad operacional nueva.</td></tr>
+    <tr><td>2–4</td><td>RTO/RPO, ERS verificable, reglas de la EDT</td><td>RPO 0 exige replicación sincrónica; requisito con verbo ambiguo y adjetivo sin cifra no es verificable; la EDT no lleva flechas, paquetes de 8/80 h y dentro del período de reporte.</td></tr>
+    <tr><td>5</td><td>Dependencias discrecionales</td><td>Sólo las discrecionales se reordenan para acortar (fast tracking).</td></tr>
+    <tr><td>6</td><td>Coeficiente de ambiente EF</td><td>EF &gt; 1 es ambiente desfavorable: la fórmula tiene pendiente negativa.</td></tr>
+    <tr><td>7</td><td>Horas nominales</td><td>Dividir por horas nominales subestima el costo en torno a 20 %.</td></tr>
+    <tr><td>8</td><td>Ventana de consultas</td><td>Es la transacción crítica: la última instancia en que las reglas se pueden mover.</td></tr>
+    <tr><td>9</td><td>Riesgo residual y secundario</td><td>Deducible del seguro = residual; que la aseguradora demore el pago = secundario.</td></tr>
+    <tr><td>10</td><td>PUE y DCiE</td><td>Medidor de la compañía ÷ PDU. PUE 1,0 imposible.</td></tr>
+    <tr><td>11</td><td>Densidad por rack</td><td>El aire llega a ≈20 kW por rack; sobre eso, refrigeración líquida o puerta trasera.</td></tr>
+    <tr><td>12</td><td>Disponibilidad en serie</td><td>Producto de las disponibilidades; caída = (1 − A) × 43.200.</td></tr>
+    <tr><td>13</td><td>EMV del registro</td><td>Σ P × I = $12 M = 5 % de los costos directos; sumar impactos sin ponderar es la trampa.</td></tr>
+    <tr><td>14</td><td>Ruta crítica</td><td>18 días, dos rutas críticas (A-C-F-H y A-D-G-H); holgura total de E = 5.</td></tr>
+    <tr><td>15</td><td>SS/FF con retraso</td><td>SS depende del inicio de la predecesora; FF se ancla al final. B se alarga 2 semanas → fin en la 23.</td></tr>
+    <tr><td>16</td><td>Dimensionamiento eléctrico</td><td>TI → UPS → sitio (× PUE) → generador; calor = carga TI.</td></tr>
+    <tr><td>17</td><td>UCP esfuerzo total</td><td>9.450 HH: UCP 189 × 20 = 3.780 de programación ÷ 0,40.</td></tr>
+    <tr><td>18</td><td>Viabilidad de plazo y presupuesto</td><td>Mismo tema que la 22 del Control 2: evaluar las dos restricciones y concluir.</td></tr>
+  </table></div>
+
+  <div class="note"><b>Patrón de los controles.</b> Casi ninguna pregunta pide una definición: piden reconocer cuál de dos conceptos parecidos aparece en un caso. La técnica es buscar en el enunciado la frase concreta que separa los dos conceptos («sin mover la fecha», «lo acepta el cliente», «falta la solución») antes de mirar las alternativas.</div>
+
+  <div class="note blue">Las prioridades para el certamen están en el <a href="#comunicado">comunicado</a>, arriba.</div>
 </section>
 
 <section id="dia">
-  <h2>Viernes en la sala</h2>
+  <h2>En la sala</h2>
   <div class="grid2">
-    <div class="card"><h4>Antes de marcar en la Sección I</h4><ul>
-      <li>Lee el enunciado y subraya la frase que separa los dos conceptos parecidos: «sin mover la fecha», «lo acepta el cliente», «falta la solución», «sin actividades detalladas».</li>
-      <li>Descarta primero las alternativas con «siempre», «todo lo posible» o «elimina el riesgo».</li>
-      <li>Si dudas entre dos, elige la que respeta la definición del curso, no la que suena más moderna.</li></ul></div>
-    <div class="card"><h4>En la Sección II</h4><ul>
-      <li>Empieza por las que mejor manejes: disponibilidad, ruta crítica, compresión, UCP.</li>
-      <li>Sin desarrollo no hay puntaje. Escribe cada paso con su unidad y dos decimales.</li>
-      <li>Termina con la conclusión que pide el enunciado: «cumple / no cumple», «conviene A por $X», «faltan N ingenieros».</li>
-      <li>Revisa el último paso: ÷ 0,40, personas hacia arriba, generador sobre sitio, racks hacia arriba.</li></ul></div>
+    <div class="card"><h4>Al recibir el certamen</h4><ul>
+      <li>Hojea las 32 en dos minutos. En investigación, marca cuál vas a dejar sin responder: la de tu propio trabajo, si aparece; si no, la que menos sepas.</li>
+      <li>Primera pasada: las alternativas que sabes al instante. Las dudosas, márcalas y sigue.</li>
+      <li>Después los desarrollos, empezando por Estimación (son los que más pesan).</li>
+      <li>Al final, vuelve a las dudosas. No te quedes pegado en ninguna.</li></ul></div>
+    <div class="card"><h4>Antes de marcar una alternativa</h4><ul>
+      <li>Subraya la frase que separa los dos conceptos parecidos: «sin mover la fecha», «lo acepta el cliente», «tal como está guardado», «antes de entregar».</li>
+      <li>Descarta primero las que dicen «siempre», «todo lo posible» o «elimina el riesgo».</li>
+      <li>Si dudas entre dos, la que respeta la definición del curso, no la que suena más moderna.</li></ul></div>
+    <div class="card"><h4>En cada desarrollo</h4><ul>
+      <li>Sin desarrollo no hay puntaje: cada paso con su unidad y dos decimales.</li>
+      <li>UCP: lee la regla del CF del enunciado y cuenta los desfavorables por escrito (cuáles y por qué).</li>
+      <li>Red: dibuja las cajas y el Gantt aunque no lo pidan explícitamente; escribe la relación en cada flecha.</li>
+      <li>Revisa el último paso: ÷ 0,40, personas hacia arriba, HH enteras, generador sobre sitio, racks hacia arriba.</li>
+      <li>Termina con la conclusión que pide el enunciado.</li></ul></div>
   </div>
 </section>
 </main>
 
 <script>
 (function(){
-  var K='fep-cert1-grupo';
+  var K='fep-cert1-grupo2';
   function load(k,d){try{var v=JSON.parse(localStorage.getItem(k)||'null');return v&&typeof v==='object'?v:d;}catch(e){return d;}}
   function store(k,v){try{localStorage.setItem(k,JSON.stringify(v));}catch(e){}}
   var saved=load(K+'-plan',{});
@@ -772,7 +1183,7 @@ EAC = 200 × 84/70 = 240 M · ETC = 240 − 84 = 156 M · VAC = 200 − 240 = �
     b.addEventListener('change',function(){saved[b.id]=b.checked;store(K+'-plan',saved);upd();});});
   upd();
 
-  var A='Arquitectura', I='Investigación', G='Gestión';
+  var A='Arquitectura', I='Investigación', ES='Estimación', PL='Planificación', SA='Sala', CA='Calidad', RI='Riesgos', CO='Contratos';
   var Q=[
   [A,"Unas bases exigen «capacidad de interacción» y «flexibilidad» como atributos de calidad. Según ISO/IEC 25010:2023, ¿qué son?",["Características nuevas sin equivalente en la versión 2011","Los nuevos nombres de usabilidad y portabilidad, respectivamente","Subcaracterísticas de la fiabilidad","Características del modelo de calidad de proceso","Los nuevos nombres de seguridad y mantenibilidad"],1,"La versión 2023 pasó de 8 a 9 características: renombró usabilidad (capacidad de interacción) y portabilidad (flexibilidad, que incluye escalabilidad) y agregó seguridad operacional."],
   [A,"El portal de matrícula opera con 2 instancias, sube solo a 10 en el peak de marzo y vuelve solo a 2 cuando baja la demanda. ¿Qué atributo describe esto?",["Escalabilidad vertical","Alta disponibilidad","Balanceo de carga","Elasticidad","Tolerancia a fallos"],3,"Elasticidad: escalamiento horizontal automático en los dos sentidos. Lo que la distingue es que también decrece."],
@@ -822,53 +1233,103 @@ EAC = 200 × 84/70 = 240 M · ETC = 240 − 84 = 156 M · VAC = 200 − 240 = �
   [I,"Un atacante roba la credencial de un funcionario. ¿Por qué ZTNA limita más el daño que una VPN?",["Porque cifra mejor","Porque la VPN entrega acceso a la subred completa y ZTNA sólo a las aplicaciones autorizadas","Porque ZTNA no usa contraseñas","Porque la VPN no tiene doble factor","No hay diferencia"],1,"La VPN facilita el movimiento lateral. Zero Trust no elimina la brecha: limita su alcance."],
   [I,"¿Qué combina el modelo SASE?",["IaaS y PaaS","SD-WAN con servicios de seguridad entregados desde la nube (SSE)","VPN con LDAP","Kubernetes con GitOps","CDN con DNS"],1,"SSE incluye SWG, CASB, FWaaS, DLP y ZTNA."],
 
-  [G,"¿Qué afirmación describe correctamente la cuenta de control?",["Es el nivel más bajo de la EDT","Integra alcance, presupuesto y cronograma, y se compara con el valor ganado; bajo ella van paquetes de planificación y de trabajo","Es lo mismo que el diccionario de la EDT","Contiene trabajo sin actividades detalladas","Es una salida de Validar el alcance"],1,"Cuenta de control → paquete de planificación (sin actividades detalladas) → paquete de trabajo."],
-  [G,"El equipo de QA aprueba un módulo y luego el patrocinador firma su recepción. ¿Qué procesos ocurrieron, en orden?",["Validar el alcance y luego controlar la calidad","Controlar la calidad y luego validar el alcance","Gestionar la calidad y luego controlar el alcance","Controlar el alcance dos veces","Validar el alcance y luego gestionar la calidad"],1,"Primero se comprueba que esté correcto (equipo) y después se acepta (cliente). Ambos son de monitoreo y control."],
-  [G,"El jefe de proyecto quiere acortar el plazo reordenando actividades, sin más recursos. ¿Sobre qué dependencias puede actuar?",["Obligatorias","Externas","Discrecionales","Internas, cualquiera","Ninguna"],2,"Sólo las discrecionales (lógica blanda) admiten otra secuencia: es el mecanismo de la ejecución rápida."],
-  [G,"Una empresa calcula el costo por hora dividiendo el costo empresa por las horas nominales. ¿Qué consecuencia tiene?",["Sobreestima el costo","Subestima el costo en torno a un 20 %","No tiene efecto","La contingencia lo compensa","El margen lo compensa"],1,"Sólo 75–85 % de las horas son productivas. El error entra en la primera línea y se arrastra a todo."],
-  [G,"¿Qué consecuencia tiene el cono de la incertidumbre para una oferta a suma alzada?",["El precio se fija cuando la incertidumbre es mínima","El precio se compromete en el punto más ancho del cono; por eso existe la reserva de contingencia","El cono se cierra al firmar","Elimina la necesidad de reservas","Sólo afecta al plazo"],1,"Antes de aprobar requisitos la estimación puede desviarse entre 0,25× y 4×."],
-  [G,"¿Cuál es la transacción crítica de una licitación desde el punto de vista del riesgo?",["La firma del contrato","La entrega de la oferta","La ventana de consultas","La recepción definitiva","La adjudicación"],2,"Es la última instancia en que las reglas se pueden mover y las respuestas cuestan cero."],
-  [G,"¿Qué distingue al informe de riesgos del registro de riesgos?",["El informe tiene los riesgos individuales","El informe presenta el riesgo general del proyecto; el registro, los individuales","Son el mismo documento","El registro sólo se usa al cierre","El informe es una salida de Monitorear y el registro no"],1,"Ambos salen de Identificar los riesgos. El riesgo general no es la suma de los individuales."],
-  [G,"El medidor de la compañía registra 60.000 kWh y las PDU 48.000 kWh. ¿Cuál es el PUE?",["0,80","1,25","1,20","80 %","1,00"],1,"PUE = 60.000 ÷ 48.000 = 1,25; el DCiE es 80 %. Un PUE de 1,0 es imposible."],
-  [G,"Un mandante necesita renovar 200 notebooks de marca y modelo ya definidos y sólo quiere comparar precios. ¿Qué documento emite?",["RFI","RFP","RFQ","Enunciado del trabajo","Memorando de entendimiento"],2,"RFQ: precio de algo perfectamente especificado. Si faltara la solución, sería RFP; si faltara información de mercado, RFI."],
-  [G,"En un FPIF, el costo real supera el punto de asunción total. ¿Qué pasa con cada peso adicional?",["Se reparte según la razón pactada","Lo paga el comprador","Lo absorbe íntegramente el vendedor","Se renegocia el techo","Lo cubre la reserva de gestión del comprador"],2,"Desde el PTA el comprador ya llegó al techo: el contrato se comporta como precio fijo cerrado."],
-  [G,"Un riesgo regulatorio excede la autoridad del director del proyecto y se escala. ¿Qué ocurre después?",["El equipo lo sigue monitoreando como antes","La organización asume su propiedad y el equipo deja de monitorearlo","Se transforma en riesgo aceptado","Se transfiere a un seguro","Se elimina del registro sin rastro"],1,"Escalar exige que alguien de la organización acepte la propiedad; puede quedar registrado sólo para información."],
-  [G,"¿Qué sostiene el modelo del costo de la calidad sobre el costo óptimo?",["Que hay que invertir todo lo posible en prevención","Que el óptimo es un equilibrio entre prevención y evaluación para evitar fallas, no un extremo","Que conviene eliminar la evaluación","Que las fallas externas son inevitables","Que la calidad no tiene costo"],1,"Existe un punto desde el cual invertir más en prevención y evaluación deja de evitar fallas equivalentes."],
-  [G,"Para cumplir el plazo, el equipo ejecuta en paralelo diseño y construcción, que iban en serie. ¿Qué técnica y qué efecto?",["Intensificación; sube el costo","Ejecución rápida; sube el riesgo y el retrabajo","Nivelación; alarga el proyecto","Estabilización; no cambia nada","Intensificación; baja el riesgo"],1,"Fast tracking actúa sobre dependencias discrecionales. El crashing es el que suma recursos y costo."],
-  [G,"¿Qué tipo de contrato hace que el proveedor gane más mientras más gasta, y por eso se recomienda no usar?",["FFP","FPIF","CPFF","CPPC","T&M con techo"],3,"Costo más porcentaje del costo: el comprador carga todo el riesgo y premia la ineficiencia."],
-  [G,"Un sistema tiene menos funciones que su competidor, pero cumple sin defectos todo lo prometido. ¿Qué se puede afirmar?",["Tiene baja calidad","Tiene menor grado y alta calidad; el grado bajo no es problema si fue declarado","Tiene alto grado","Calidad y grado son lo mismo","No se puede evaluar"],1,"Grado = prestaciones; calidad = cumplimiento de requisitos. El grado se negocia, la calidad se cumple."],
-  [G,"Según el capítulo 7 del PMBOK, un proyecto tiene CPI = 0,83 y SPI = 0,88. ¿Qué indica?",["Va bajo presupuesto y adelantado","Va sobre presupuesto y atrasado","Va sobre presupuesto y adelantado","Va bajo presupuesto y atrasado","Va exactamente según lo planificado"],1,"CPI = EV/AC y SPI = EV/PV: menor que 1 significa sobrecosto y atraso, respectivamente."]
+  [PL,"¿Qué afirmación describe correctamente la cuenta de control?",["Es el nivel más bajo de la EDT","Integra alcance, presupuesto y cronograma, y se compara con el valor ganado; bajo ella van paquetes de planificación y de trabajo","Es lo mismo que el diccionario de la EDT","Contiene trabajo sin actividades detalladas","Es una salida de Validar el alcance"],1,"Cuenta de control → paquete de planificación (sin actividades detalladas) → paquete de trabajo."],
+  [PL,"El equipo de QA aprueba un módulo y luego el patrocinador firma su recepción. ¿Qué procesos ocurrieron, en orden?",["Validar el alcance y luego controlar la calidad","Controlar la calidad y luego validar el alcance","Gestionar la calidad y luego controlar el alcance","Controlar el alcance dos veces","Validar el alcance y luego gestionar la calidad"],1,"Primero se comprueba que esté correcto (equipo) y después se acepta (cliente). Ambos son de monitoreo y control."],
+  [PL,"El jefe de proyecto quiere acortar el plazo reordenando actividades, sin más recursos. ¿Sobre qué dependencias puede actuar?",["Obligatorias","Externas","Discrecionales","Internas, cualquiera","Ninguna"],2,"Sólo las discrecionales (lógica blanda) admiten otra secuencia: es el mecanismo de la ejecución rápida."],
+  [ES,"Una empresa calcula el costo por hora dividiendo el costo empresa por las horas nominales. ¿Qué consecuencia tiene?",["Sobreestima el costo","Subestima el costo en torno a un 20 %","No tiene efecto","La contingencia lo compensa","El margen lo compensa"],1,"Sólo 75–85 % de las horas son productivas. El error entra en la primera línea y se arrastra a todo."],
+  [ES,"¿Qué consecuencia tiene el cono de la incertidumbre para una oferta a suma alzada?",["El precio se fija cuando la incertidumbre es mínima","El precio se compromete en el punto más ancho del cono; por eso existe la reserva de contingencia","El cono se cierra al firmar","Elimina la necesidad de reservas","Sólo afecta al plazo"],1,"Antes de aprobar requisitos la estimación puede desviarse entre 0,25× y 4×."],
+  [RI,"¿Cuál es la transacción crítica de una licitación desde el punto de vista del riesgo?",["La firma del contrato","La entrega de la oferta","La ventana de consultas","La recepción definitiva","La adjudicación"],2,"Es la última instancia en que las reglas se pueden mover y las respuestas cuestan cero."],
+  [RI,"¿Qué distingue al informe de riesgos del registro de riesgos?",["El informe tiene los riesgos individuales","El informe presenta el riesgo general del proyecto; el registro, los individuales","Son el mismo documento","El registro sólo se usa al cierre","El informe es una salida de Monitorear y el registro no"],1,"Ambos salen de Identificar los riesgos. El riesgo general no es la suma de los individuales."],
+  [SA,"El medidor de la compañía registra 60.000 kWh y las PDU 48.000 kWh. ¿Cuál es el PUE?",["0,80","1,25","1,20","80 %","1,00"],1,"PUE = 60.000 ÷ 48.000 = 1,25; el DCiE es 80 %. Un PUE de 1,0 es imposible."],
+  [CO,"Un mandante necesita renovar 200 notebooks de marca y modelo ya definidos y sólo quiere comparar precios. ¿Qué documento emite?",["RFI","RFP","RFQ","Enunciado del trabajo","Memorando de entendimiento"],2,"RFQ: precio de algo perfectamente especificado. Si faltara la solución, sería RFP; si faltara información de mercado, RFI."],
+  [CO,"En un FPIF, el costo real supera el punto de asunción total. ¿Qué pasa con cada peso adicional?",["Se reparte según la razón pactada","Lo paga el comprador","Lo absorbe íntegramente el vendedor","Se renegocia el techo","Lo cubre la reserva de gestión del comprador"],2,"Desde el PTA el comprador ya llegó al techo: el contrato se comporta como precio fijo cerrado."],
+  [RI,"Un riesgo regulatorio excede la autoridad del director del proyecto y se escala. ¿Qué ocurre después?",["El equipo lo sigue monitoreando como antes","La organización asume su propiedad y el equipo deja de monitorearlo","Se transforma en riesgo aceptado","Se transfiere a un seguro","Se elimina del registro sin rastro"],1,"Escalar exige que alguien de la organización acepte la propiedad; puede quedar registrado sólo para información."],
+  [CA,"¿Qué sostiene el modelo del costo de la calidad sobre el costo óptimo?",["Que hay que invertir todo lo posible en prevención","Que el óptimo es un equilibrio entre prevención y evaluación para evitar fallas, no un extremo","Que conviene eliminar la evaluación","Que las fallas externas son inevitables","Que la calidad no tiene costo"],1,"Existe un punto desde el cual invertir más en prevención y evaluación deja de evitar fallas equivalentes."],
+  [PL,"Para cumplir el plazo, el equipo ejecuta en paralelo diseño y construcción, que iban en serie. ¿Qué técnica y qué efecto?",["Intensificación; sube el costo","Ejecución rápida; sube el riesgo y el retrabajo","Nivelación; alarga el proyecto","Estabilización; no cambia nada","Intensificación; baja el riesgo"],1,"Fast tracking actúa sobre dependencias discrecionales. El crashing es el que suma recursos y costo."],
+  [CO,"¿Qué tipo de contrato hace que el proveedor gane más mientras más gasta, y por eso se recomienda no usar?",["FFP","FPIF","CPFF","CPPC","T&M con techo"],3,"Costo más porcentaje del costo: el comprador carga todo el riesgo y premia la ineficiencia."],
+  [CA,"Un sistema tiene menos funciones que su competidor, pero cumple sin defectos todo lo prometido. ¿Qué se puede afirmar?",["Tiene baja calidad","Tiene menor grado y alta calidad; el grado bajo no es problema si fue declarado","Tiene alto grado","Calidad y grado son lo mismo","No se puede evaluar"],1,"Grado = prestaciones; calidad = cumplimiento de requisitos. El grado se negocia, la calidad se cumple."],
+  [CO,"Según el capítulo 7 del PMBOK, un proyecto tiene CPI = 0,83 y SPI = 0,88. ¿Qué indica?",["Va bajo presupuesto y adelantado","Va sobre presupuesto y atrasado","Va sobre presupuesto y adelantado","Va bajo presupuesto y atrasado","Va exactamente según lo planificado"],1,"CPI = EV/AC y SPI = EV/PV: menor que 1 significa sobrecosto y atraso, respectivamente."],
+  [ES,"En el método de puntos de casos de uso, ¿qué cambio mueve más el esfuerzo total?",["Subir de 3 a 4 un factor técnico de peso 1","Agregar un actor simple","Que un factor de ambiente cruce el umbral y el factor de conversión pase de 20 a 28","Subir T6 de 2 a 4","Subir E3 de 3 a 4"],2,"El salto de 20 a 28 horas por punto sube el esfuerzo un 40 % de una vez: es el parámetro más sensible del método. Un factor técnico de peso 1 mueve el TCF en 0,01."],
+  [ES,"El factor E7 (personal a tiempo parcial) sube de 2 a 4. ¿Qué ocurre?",["El EF baja y el esfuerzo baja","ΣE baja en 2, el EF sube en 0,06 y E7 pasa a contarse como desfavorable","Nada, porque E7 tiene peso negativo","Sube el TCF","Sólo cambia el factor de conversión"],1,"E7 pesa −1: subir 2 puntos resta 2 a ΣE y el EF sube 0,03 × 2. Además E7 = 4 es mayor que 3: pasa a ser desfavorable y puede empujar el CF a 28."],
+  [ES,"El esfuerzo total es 9.000 HH. La empresa tiene 5 ingenieros a 160 h/mes y las bases dan 10 meses. ¿Qué afirmación es correcta?",["Es viable en plazo","Requiere 6 ingenieros; agregar el sexto no cambia el costo total","Requiere 6 ingenieros y el costo sube un 20 %","Basta con 5,63 ingenieros","Hay que bajar la tarifa para cumplir el plazo"],1,"Plazo = 9.000 ÷ 800 = 11,25 meses &gt; 10. Dotación = 9.000 ÷ 1.600 = 5,63 → 6. El costo es HH × tarifa: las horas son las mismas con 5 o con 6 personas."],
+  [ES,"Una pantalla muestra el estado de un trámite tal como está guardado, sin cálculos. ¿Cómo se clasifica en punto de función?",["EI","EO","EQ","ILF","EIF"],2,"Consulta externa: sale sin cálculo ni actualización. Si el dato saliera calculado o derivado, sería EO."],
+  [ES,"Una plataforma la usan 5.000 vecinos por una interfaz web y se integra con ClaveÚnica por API. ¿Cuánto vale el UAW?",["15.001","5.001","4","6","3"],2,"Un actor es un rol, no una persona: «Vecino» es un actor complejo (3) y ClaveÚnica uno simple (1). UAW = 4."],
+  [ES,"¿Por qué en el curso el resultado de UCP × CF se divide por 0,40?",["Porque es el factor de horas productivas","Porque corresponde sólo a la programación, que es el 40 % del esfuerzo del proyecto","Para pasar de horas a meses","Porque el EF ya incluye las pruebas","Para agregar la reserva de contingencia"],1,"Convención del curso (lectura B): E = UCP × CF es la programación. El total es ÷ 0,40, y se reparte 10/20/40/15/15."],
+  [ES,"¿Qué es una transacción al contar un caso de uso?",["Cada pantalla del caso de uso","Cada tabla que toca","Un viaje de ida y vuelta: el actor actúa, el sistema procesa y responde","Cada paso interno del sistema","Cada flujo alternativo, siempre"],2,"Definición de Jacobson. Un paso interno que el actor no ve no es transacción; un flujo alternativo cuenta sólo si agrega idas y vueltas."],
+  [PL,"B tiene relación Inicio-Inicio con A, con retraso de 2 semanas. A empieza a tiempo pero dura 3 semanas más. ¿Qué pasa con B?",["B se atrasa 3 semanas","B no se mueve: depende del inicio de A, y sólo crece su holgura","B se atrasa 1 semana","B se adelanta","El proyecto se atrasa 3 semanas"],1,"Con SS la sucesora depende del inicio de la predecesora. Es la observación del Control 1, pregunta 15, sobre la tarea C."],
+  [PL,"La actividad G tiene relación Fin-Fin con D. ¿Cómo se programa G en el recorrido hacia adelante?",["IT de G = FT de D","Se ancla el final: FT de G = FT de D (+ retraso) y se retrocede su duración","IT de G = IT de D","G se programa al final del proyecto","No se puede programar"],1,"Con FF se fija el final de la sucesora y se resta su duración para obtener el inicio."],
+  [PL,"La redacción del manual comienza 2 días antes de que termine el desarrollo. ¿Cómo se anota la relación?",["FS + 2","SS + 2","FS − 2, un adelanto","FF − 2","SF + 2"],2,"El adelanto (lead) anticipa la sucesora y se anota con signo negativo sobre la relación fin a inicio."],
+  [PL,"Entre el cierre contable y la carga de datos hay un retraso de 3 días. ¿Qué afirmación es correcta?",["Consume 3 días de horas del equipo","No consume horas ni recursos, pero ocupa 3 días del plazo","Es lo mismo que un adelanto","Se puede eliminar sin costo","Reduce la holgura libre de la carga"],1,"El retraso es espera, no trabajo."],
+  [PL,"Una actividad tiene holgura total 5 y holgura libre 2, y se atrasa 3. ¿Qué ocurre?",["Nada cambia","Se atrasa el inicio temprano de su sucesora, pero el proyecto termina en la misma fecha","El proyecto se atrasa 1","El proyecto se atrasa 3","La actividad pasa a ser crítica"],1,"Superó la holgura libre (mueve a la sucesora) pero no la total (no mueve el fin)."],
+  [PL,"Una actividad con holgura total 4 se atrasa 6 semanas. ¿Qué ocurre?",["El proyecto se atrasa 6","El proyecto se atrasa 2 y la actividad pasa a la ruta crítica","No pasa nada","El proyecto se atrasa 4","Sólo se atrasa su sucesora"],1,"Atraso del proyecto = atraso − HT = 6 − 4 = 2. La ruta crítica puede cambiar."],
+  [PL,"Se conceden 10 días para un trabajo que requiere 6, y termina en el día 10. ¿Qué efecto es?",["Síndrome del estudiante","Ley de Parkinson","Procrastinación","Curva de aprendizaje","Rendimientos decrecientes"],1,"El trabajo se extiende hasta ocupar todo el tiempo disponible. Por eso la reserva se concentra a nivel de proyecto."],
+  [PL,"El equipo trabaja en serio en una actividad sólo cuando se acerca su fecha de término. ¿Qué recomienda la clase frente a esto?",["Repartir más holgura en cada actividad","Concentrar la reserva a nivel de proyecto","Agregar personas","Usar estimación análoga","Eliminar los hitos internos"],1,"Síndrome del estudiante: la holgura de cada actividad se gasta al principio. Concentrada en el proyecto, queda disponible para cuando aparece el problema."],
+  [PL,"Para instalar se espera que el proveedor entregue los servidores. ¿Qué tipo de dependencia es y cómo se trata?",["Discrecional; se reordena","Externa; se documenta como supuesto y es riesgo del proyecto","Obligatoria interna","Interna; la controla el equipo","Lógica blanda"],1,"Externa: involucra algo que el proyecto no controla."],
+  [PL,"El equipo intensifica (crashing) una actividad que no está en la ruta crítica. ¿Qué logra?",["Acorta el proyecto","Sube el costo sin acortar el proyecto","Baja el riesgo","Acorta y abarata","Cambia la ruta crítica siempre"],1,"La intensificación sólo acorta si se aplica a actividades críticas; en otra sólo aumenta su holgura y el costo."],
+  [PL,"A mitad del proyecto se duplica el equipo para terminar a tiempo. ¿Qué se puede esperar?",["El plazo restante se reduce a la mitad","El plazo baja menos de la mitad: hay transferencia de conocimiento, curva de aprendizaje y más coordinación","El esfuerzo total baja","El costo se mantiene y el plazo baja a la mitad","No afecta la duración"],1,"Esfuerzo y duración no se intercambian linealmente. «Nueve mujeres no producen un bebé en un mes»."],
+  [PL,"¿Cuál de estas afirmaciones sobre la EDT es correcta?",["Muestra el orden de ejecución de izquierda a derecha","Cada nivel suma el 100 % del trabajo del padre y no tiene secuencia","Llega hasta las actividades","Tiene flechas de precedencia","Debe tener exactamente tres niveles"],1,"Regla del 100 %; la secuencia aparece recién en el cronograma, cuando los paquetes se descomponen en actividades."],
+  [PL,"¿Cuál es la duración de un hito?",["Un día","La del paquete que lo origina","Cero: es un punto de control, se cumple o no","Una semana","Depende del contrato"],2,"Un hito no consume tiempo ni recursos; su estado es binario."],
+  [SA,"Un proveedor ofrece alojar la solución en su datacenter TIER III, pero la oficina del mandante llega por un único enlace. ¿Qué se puede declarar?",["Disponibilidad TIER III del servicio completo","El TIER no se hereda: el enlace único es un punto único de falla del servicio","TIER IV por estar en la nube","TIER III porque lo certifica el proveedor","TIER II por el enlace"],1,"El TIER es del recinto y su topología; la disponibilidad del servicio depende de toda la cadena."],
+  [SA,"¿Qué define el nivel TIER de una sala?",["La disponibilidad medida el último año","La topología: redundancia de componentes y caminos de distribución","La cantidad de racks","El PUE","La marca del UPS"],1,"La disponibilidad asociada a cada TIER es consecuencia de la topología, no su definición."],
+  [SA,"¿Qué agrega TIER IV sobre TIER III?",["Piso técnico","Generador","Tolera una falla imprevista: dos caminos activos y componentes 2(N+1)","Mantenimiento concurrente","UPS N+1"],2,"TIER III ya permite mantener sin apagar; TIER IV además tolera una falla no planificada."],
+  [SA,"¿Qué potencia debe cubrir el generador de una sala?",["Sólo la carga TI","La carga TI y el clima, más la partida de motores","Sólo el UPS","La mitad de la carga TI","Sólo la iluminación"],1,"Un generador que sólo cubre los servidores deja la sala sin clima: se apaga por temperatura."],
+  [SA,"Ocho racks a 4 kW cada uno. ¿Cuánto calor hay que extraer de la sala blanca?",["32 kW, unos 109.184 BTU/h","51,2 kW, porque se multiplica por el PUE","12.000 BTU/h","4 kW","16 kW"],0,"1 kW eléctrico consumido es 1 kW de calor: 32 × 3.412 = 109.184 BTU/h. El clima se dimensiona sobre la carga TI."],
+  [CA,"¿En qué orden se usan las herramientas para atacar defectos recurrentes?",["Ishikawa, Pareto, causa raíz","Pareto para elegir el problema, Ishikawa para sus causas, causa raíz para elegir cuál corregir","Histograma, auditoría, Pareto","Causa raíz, Pareto, Ishikawa","Muestreo, Ishikawa, Pareto"],1,"Es el orden de la clase: priorizar, explorar causas, corregir la fuente."],
+  [CA,"Requisito: «La consulta responde en menos de 2 segundos en el percentil 95». ¿Qué le falta para estar bien escrito?",["La métrica","El atributo","La condición (carga, ambiente, horario) y el método de verificación","El valor objetivo","Nada"],2,"Cinco partes: atributo, métrica, valor objetivo, condición y método de verificación."],
+  [CA,"¿En qué categoría del costo de la calidad van las multas por incumplir el SLA después de la puesta en marcha?",["Prevención","Evaluación","Fallas internas","Fallas externas","Grado"],3,"Las constata el cliente después de la entrega: falla externa, costo de no conformidad."],
+  [CA,"¿En qué categoría va repetir las pruebas de un módulo que QA rechazó antes de entregarlo?",["Prevención","Evaluación","Fallas internas","Fallas externas","Costo de conformidad"],2,"Las detecta el equipo antes de entregar: falla interna."],
+  [CA,"La organización examina y corrige el proceso que produjo los defectos, no sólo los defectos. ¿En qué nivel de gestión de la calidad está?",["1 · El cliente encuentra los defectos","2 · Se detectan antes de entregar","3 · Se corrige el proceso (aseguramiento)","4 · La calidad entra en el diseño","5 · Cultura de calidad"],2,"Corregir el proceso es aseguramiento: nivel 3 de 5."],
+  [CA,"Un grupo escribe en su propuesta «estamos certificados en ISO/IEC 25010». ¿Qué observación corresponde?",["Es correcto","ISO 25010 es un modelo de calidad del producto y no se certifica","Debe decir ISO 25010:2011","ISO 25010 certifica procesos","Sólo vale con CMMI"],1,"ISO 9001 certifica el sistema de gestión; ISO 25010 es el modelo de las nueve características."],
+  [RI,"Un riesgo tiene P = 0,6 e I = 0,5 en escala de 0 a 1. Según las zonas del curso, ¿qué corresponde?",["Crítica: evitar","Alta: mitigar con una acción costeada en la EDT y el cronograma","Media: reserva y disparador","Baja: sólo observar","Escalar"],1,"Exposición 0,30, entre 0,20 y 0,40: zona alta."],
+  [RI,"Una respuesta cuesta $3 M y baja el valor esperado del riesgo de $5 M a $3,5 M. ¿Qué conviene?",["Aplicarla: reduce el riesgo","No aplicarla: ahorra 1,5 M y cuesta 3 M; aceptar y reservar","Transferir siempre","Escalar","Aplicarla dos veces"],1,"Una respuesta se justifica si el ahorro esperado supera su costo."],
+  [RI,"Un riesgo de exposición crítica está bajo el control del equipo. ¿Qué estrategia corresponde?",["Aceptar pasivamente","Evitar: cambiar alcance o arquitectura para que deje de existir","Transferir","Mitigar parcialmente","Explotar"],1,"Crítica y controlable: evitar. Si lo controla un tercero competente, transferir."],
+  [RI,"«No aceptamos más de 10 % de sobrecosto en este contrato». ¿Qué concepto es?",["Apetito al riesgo","Tolerancia al riesgo","Umbral de riesgo","Exposición","Reserva de gestión"],1,"Tolerancia: la desviación aceptada en un objetivo, expresada con número. El apetito es la postura estratégica; el umbral, el punto que dispara una acción."],
+  [A,"¿Qué condición debe cumplir una aplicación para escalar horizontalmente?",["Tener una base de datos más grande","Ser sin estado: la sesión vive en un almacén compartido, no en el nodo","Correr en una máquina virtual","Usar sesiones pegajosas","Tener un solo servidor de aplicaciones"],1,"Si la sesión vive en el nodo, el nodo no se puede reemplazar ni sumar. Esa decisión se toma al diseñar el software."],
+  [A,"Una tarea procesa un archivo cada vez que llega, pocas veces al día, en menos de un minuto. ¿Qué modelo de ejecución conviene?",["Máquina virtual reservada","Kubernetes gestionado","Funciones serverless","Servidor físico","Contenedores en un clúster propio"],2,"Por evento, corta e intermitente: costo cero sin uso. Con carga alta y constante ganaría la máquina virtual reservada."],
+  [A,"El mandante exige un software heredado que debe instalarse en el servidor. ¿Qué modelo de cómputo corresponde?",["Funciones","Contenedores sin servidor","Máquina virtual (IaaS)","SaaS","PaaS"],2,"Es la primera de las cinco preguntas: si exige el sistema operativo completo, no hay alternativa."]
   ];
 
   var host=document.getElementById('quiz');
-  var answered=load(K+'-quiz',{});
-  var filter='all';
-  function score(){var n=0,c=0;Object.keys(answered).forEach(function(k){if(!Q[k])return;n++;if(answered[k]===Q[k][3])c++;});
-    document.getElementById('scoreTxt').textContent=n+' de '+Q.length+' respondidas · '+c+' correctas';}
+  var answered=load(K+'-quiz2',{});
+  var meta=load(K+'-quizmeta',{seed:1});
+  var filter='cert';
+  var CERT=[[A,5],[I,6],[PL,4],[ES,1],[RI,2],[SA,2],[CA,3]];
+  function h(n){n=((n>>>16)^n)*0x45d9f3b;n=((n>>>16)^n)*0x45d9f3b;n=(n>>>16)^n;return n>>>0;}
   function order(i,n){var a=[];for(var j=0;j<n;j++)a.push(j);
     return a.sort(function(x,y){return h(i*31+x*7)-h(i*31+y*7);});}
-  function h(n){n=((n>>>16)^n)*0x45d9f3b;n=((n>>>16)^n)*0x45d9f3b;n=(n>>>16)^n;return n>>>0;}
+  function certSet(){var out=[];CERT.forEach(function(c){
+      var ids=[];Q.forEach(function(q,i){if(q[0]===c[0])ids.push(i);});
+      ids.sort(function(x,y){return h(x*131+meta.seed*977)-h(y*131+meta.seed*977);});
+      out=out.concat(ids.slice(0,c[1]));});return out;}
+  function view(){if(filter==='cert')return certSet();var v=[];Q.forEach(function(q,i){if(filter==='all'||q[0]===filter)v.push(i);});return v;}
+  function score(){var v=view(),n=0,c=0;v.forEach(function(k){if(answered[k]===undefined)return;n++;if(answered[k]===Q[k][3])c++;});
+    document.getElementById('scoreTxt').textContent=n+' de '+v.length+' respondidas · '+c+' correctas';}
   function mark(box,i,choice){box.querySelectorAll('button').forEach(function(b){var j=+b.getAttribute('data-j');b.disabled=true;
       if(j===Q[i][3]) b.classList.add('right'); else if(j===choice) b.classList.add('wrong');});
     box.querySelector('.why').hidden=false;}
   function render(){host.innerHTML='';var num=0;
-    Q.forEach(function(q,i){ if(filter!=='all'&&q[0]!==filter) return; num++;
+    document.getElementById('qtools').hidden=(filter!=='cert');
+    document.getElementById('roundTxt').textContent='Tanda '+meta.seed;
+    view().forEach(function(i){var q=Q[i]; num++;
       var d=document.createElement('div');d.className='q';
-      var h='<div class="qn">'+num+' · '+q[0]+'</div><p class="stem">'+q[1]+'</p><div class="opts">';
-      order(i,q[2].length).forEach(function(j,pos){h+='<button type="button" data-j="'+j+'" id="q'+i+'o'+j+'">'+String.fromCharCode(97+pos)+') '+q[2][j]+'</button>';});
-      h+='</div><p class="why" hidden>'+q[4]+'</p>';d.innerHTML=h;host.appendChild(d);
+      var s='<div class="qn">'+num+' · '+q[0]+'</div><p class="stem">'+q[1]+'</p><div class="opts">';
+      order(i,q[2].length).forEach(function(j,pos){s+='<button type="button" data-j="'+j+'" id="q'+i+'o'+j+'">'+String.fromCharCode(97+pos)+') '+q[2][j]+'</button>';});
+      s+='</div><p class="why" hidden>'+q[4]+'</p>';d.innerHTML=s;host.appendChild(d);
       d.querySelectorAll('button').forEach(function(b){var j=+b.getAttribute('data-j');b.addEventListener('click',function(){
-        if(answered[i]!==undefined) return; answered[i]=j; store(K+'-quiz',answered); mark(d,i,j); score();});});
+        if(answered[i]!==undefined) return; answered[i]=j; store(K+'-quiz2',answered); mark(d,i,j); score();});});
       if(answered[i]!==undefined) mark(d,i,answered[i]);
-    });}
+    });score();}
   document.querySelectorAll('#filters button').forEach(function(b){b.addEventListener('click',function(){
     filter=b.getAttribute('data-f');
     document.querySelectorAll('#filters button').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false');});
     render();});});
-  document.getElementById('resetQuiz').addEventListener('click',function(){answered={};store(K+'-quiz',answered);render();score();});
-  render();score();
+  document.getElementById('newRound').addEventListener('click',function(){
+    certSet().forEach(function(k){delete answered[k];});
+    meta.seed++;store(K+'-quizmeta',meta);
+    certSet().forEach(function(k){delete answered[k];});store(K+'-quiz2',answered);render();});
+  document.getElementById('resetQuiz').addEventListener('click',function(){view().forEach(function(k){delete answered[k];});store(K+'-quiz2',answered);render();});
+  render();
 })();
 </script>
-
 </body>
 </html>
